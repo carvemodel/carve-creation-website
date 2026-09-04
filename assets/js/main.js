@@ -92,4 +92,40 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('scroll', onScroll);
     onScroll();
   }
+
+  // Homepage hero slider
+  var heroSlider = document.getElementById('heroSlider');
+  if (heroSlider) {
+    var slides = heroSlider.querySelectorAll('.hero-slide');
+    var dots = heroSlider.querySelectorAll('.hero-dot');
+    var current = 0;
+    var rotateMs = 6500;
+    var timer;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    function startRotation() {
+      timer = setInterval(function () { goTo(current + 1); }, rotateMs);
+    }
+
+    function resetRotation() {
+      clearInterval(timer);
+      startRotation();
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        goTo(i);
+        resetRotation();
+      });
+    });
+
+    if (slides.length > 1) startRotation();
+  }
 });
