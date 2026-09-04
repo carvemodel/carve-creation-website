@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System | Carve Creation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=145">
+<style>
+  /* Style-guide-only scaffolding — kept separate from styles.css so this
+     page never leaks into the real site styles. */
+  .ds-section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  .ds-section:last-child { border-bottom: none; }
+  .ds-label { font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted-2); margin-bottom: 1.4rem; }
+  .ds-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-start; }
+  .ds-swatch { width: 132px; }
+  .ds-swatch .chip { height: 88px; border-radius: var(--radius-sm); border: 1px solid var(--line); margin-bottom: 8px; }
+  .ds-swatch .name { font-size: .82rem; font-weight: 600; color: var(--ink); }
+  .ds-swatch .hex { font-size: .78rem; color: var(--muted-2); font-family: monospace; }
+  .ds-type-row { display: flex; align-items: baseline; gap: 22px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .ds-type-row:last-child { border-bottom: none; }
+  .ds-type-meta { font-size: .78rem; color: var(--muted-2); font-family: monospace; min-width: 220px; }
+  .ds-spacing-row { display: flex; align-items: center; gap: 18px; padding: 10px 0; }
+  .ds-spacing-bar { background: var(--dark); height: 14px; border-radius: 3px; }
+  .ds-token-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .ds-token-table th { text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted-2); padding: 8px 16px 8px 0; border-bottom: 1px solid var(--line); }
+  .ds-token-table td { padding: 10px 16px 10px 0; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .ds-token-table code { font-family: monospace; background: var(--cream); padding: 3px 7px; border-radius: 4px; }
+  .ds-component-demo { padding: 40px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+  .ds-component-demo.on-dark { background: var(--dark); }
+  .ds-component-demo.on-cream { background: var(--cream); }
+  .ds-nav-index { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-bottom: 2.5rem; }
+  .ds-nav-index a { font-size: .85rem; font-weight: 600; color: var(--ink); border-bottom: 2px solid var(--line); padding-bottom: 2px; }
+  .ds-nav-index a:hover { border-color: var(--ink); }
+  .ds-card-mini { max-width: 340px; }
+  .ds-icon-demo { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<div style="background:var(--dark); color:var(--white); padding:48px 0 40px;">
+  <div class="container">
+    <span class="eyebrow on-dark">Internal Reference</span>
+    <h1 style="color:var(--white); font-size:clamp(1.8rem,3.4vw,2.6rem);">Carve Creation Design System</h1>
+    <p style="color:#cbc9bf; max-width:640px; margin:0;">A living reference pulled directly from <code style="font-family:monospace;background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px;">assets/css/styles.css</code>. Every color, type size, and component below renders with the site's real stylesheet, so this page stays accurate as the CSS evolves — edit the stylesheet, not this page.</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top:32px;">
+  <div class="ds-nav-index">
+    <a href="#colors">Colors</a>
+    <a href="#typography">Typography</a>
+    <a href="#spacing">Spacing &amp; Radius</a>
+    <a href="#buttons">Buttons</a>
+    <a href="#cards">Cards</a>
+    <a href="#nav">Navigation</a>
+    <a href="#lists">Lists &amp; Process</a>
+    <a href="#forms">Forms</a>
+    <a href="#cta">CTA &amp; Callouts</a>
+  </div>
+</div>
+
+<section class="ds-section" id="colors">
+  <div class="container">
+    <div class="ds-label">Colors</div>
+    <p style="max-width:640px;">Monochrome system by design — near-black text and buttons, off-white/cream section backgrounds, no colored brand accent. Green is reserved for two narrow, specific uses only.</p>
+    <div class="ds-row" style="margin-top:1.5rem;">
+      <div class="ds-swatch"><div class="chip" style="background:var(--dark);"></div><div class="name">Dark</div><div class="hex">--dark #282828</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--dark-2);"></div><div class="name">Dark 2</div><div class="hex">--dark-2 #1a1a1a</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--ink);"></div><div class="name">Ink</div><div class="hex">--ink #1f1f1f</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--muted);"></div><div class="name">Muted</div><div class="hex">--muted #6b6b6b</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--muted-2);"></div><div class="name">Muted 2</div><div class="hex">--muted-2 #949494</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--line);"></div><div class="name">Line</div><div class="hex">--line #e5e5e5</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--line-dark);"></div><div class="name">Line Dark</div><div class="hex">--line-dark #333333</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--cream); border-color:var(--line);"></div><div class="name">Cream</div><div class="hex">--cream #f8f8f8</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--cream-2);"></div><div class="name">Cream 2</div><div class="hex">--cream-2 #ececec</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--white); border-color:var(--line);"></div><div class="name">White</div><div class="hex">--white #ffffff</div></div>
+    </div>
+    <div class="ds-label" style="margin-top:2.5rem;">Reserved-use greens</div>
+    <div class="ds-row">
+      <div class="ds-swatch"><div class="chip" style="background:var(--brand-green);"></div><div class="name">Brand Green</div><div class="hex">--brand-green #83953f</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--success);"></div><div class="name">Success</div><div class="hex">--success #7bc94a</div></div>
+      <div class="ds-swatch"><div class="chip" style="background:var(--success-soft); border-color:var(--line);"></div><div class="name">Success Soft</div><div class="hex">--success-soft #eef8e6</div></div>
+    </div>
+    <p style="margin-top:1.2rem; font-size:.88rem;"><strong style="color:var(--ink);">Brand Green</strong> is sampled from the hero photo's plant foliage and used only for the market-card <code style="font-family:monospace;background:var(--cream);padding:2px 6px;border-radius:4px;">:target</code> highlight ring. <strong style="color:var(--ink);">Success</strong> is used only for form-confirmation states. Neither appears anywhere else on the site — do not use them as a general accent.</p>
+  </div>
+</section>
+
+<section class="ds-section" id="typography">
+  <div class="container">
+    <div class="ds-label">Typography</div>
+    <p style="max-width:640px;">One typeface across the whole site — Inter, used for both headings and body. Headings are 700 weight with tight tracking; body copy runs in Muted gray at 1.6 line-height.</p>
+    <div style="margin-top:1.5rem;">
+      <div class="ds-type-row"><div class="ds-type-meta">h1 &middot; clamp(2.2rem, 4.2vw, 3.6rem) &middot; 700</div><h1 style="margin:0;">Contract Furniture, Managed as a Package.</h1></div>
+      <div class="ds-type-row"><div class="ds-type-meta">h2 &middot; clamp(1.7rem, 2.8vw, 2.4rem) &middot; 700</div><h2 style="margin:0;">What We Manufacture and Deliver</h2></div>
+      <div class="ds-type-row"><div class="ds-type-meta">h3 &middot; clamp(1.2rem, 1.6vw, 1.5rem) &middot; 700</div><h3 style="margin:0;">Contract Furniture Packages</h3></div>
+      <div class="ds-type-row"><div class="ds-type-meta">.eyebrow &middot; .78rem &middot; 600 &middot; uppercase</div><span class="eyebrow" style="margin:0;">Three Capabilities</span></div>
+      <div class="ds-type-row"><div class="ds-type-meta">body p &middot; 1rem &middot; var(--muted)</div><p style="margin:0; max-width:520px;">Custom casegoods, tables, seating, banquettes, counters, and furniture families manufactured for guestrooms, public areas, and workplaces.</p></div>
+      <div class="ds-type-row"><div class="ds-type-meta">.lede &middot; 1.12rem &middot; on dark hero</div><p style="margin:0; max-width:520px; color:var(--muted);">Made to project requirements and managed from approved design through manufacturing and delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-section" id="spacing">
+  <div class="container">
+    <div class="ds-label">Spacing, Radius &amp; Layout Tokens</div>
+    <table class="ds-token-table">
+      <tr><th>Token</th><th>Value</th><th>Used for</th></tr>
+      <tr><td><code>--container</code></td><td>1180px</td><td>Max content width</td></tr>
+      <tr><td><code>--frame</code></td><td>24px</td><td>Outer margin around the hero-frame card</td></tr>
+      <tr><td><code>--radius-sm</code></td><td>8px</td><td>Form fields, dropdown menu, badges</td></tr>
+      <tr><td><code>--radius</code></td><td>14px</td><td>Cards, images, CTA band</td></tr>
+      <tr><td><code>--radius-xl</code></td><td>30px</td><td>Hero-frame outer corners, nav pill bottom corners</td></tr>
+      <tr><td><code>--notch-r</code></td><td>88px</td><td>Header / nav pill height</td></tr>
+      <tr><td><code>.section</code></td><td>96px 0</td><td>Standard section vertical padding</td></tr>
+      <tr><td><code>.section.tight</code></td><td>64px 0</td><td>Compact section padding (e.g. process section)</td></tr>
+    </table>
+    <div class="ds-label" style="margin-top:2.2rem;">Grid gaps</div>
+    <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:14px;"></div><span>14px &mdash; .btn-row, check-list gap</span></div>
+    <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:28px;"></div><span>28px &mdash; .grid gap (card grids)</span></div>
+    <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:48px;"></div><span>48px &mdash; .split.uneven gap</span></div>
+    <div class="ds-spacing-row"><div class="ds-spacing-bar" style="width:60px;"></div><span>60px &mdash; .split gap</span></div>
+  </div>
+</section>
+
+<section class="ds-section" id="buttons">
+  <div class="container">
+    <div class="ds-label">Buttons</div>
+    <p style="max-width:640px;">Pill-shaped, 14px/30px padding. Four variants — pick the one that matches the surface behind it, not the page.</p>
+    <div class="ds-row" style="margin-top:1.2rem;">
+      <div class="ds-component-demo"><a href="#" class="btn btn-accent">btn-accent</a></div>
+      <div class="ds-component-demo"><a href="#" class="btn btn-outline-dark">btn-outline-dark</a></div>
+      <div class="ds-component-demo on-dark"><a href="#" class="btn btn-light">btn-light</a></div>
+      <div class="ds-component-demo on-dark"><a href="#" class="btn btn-outline-light">btn-outline-light</a></div>
+    </div>
+    <table class="ds-token-table" style="margin-top:1.6rem;">
+      <tr><th>Class</th><th>Surface</th><th>Use</th></tr>
+      <tr><td><code>.btn-accent</code></td><td>Any light surface</td><td>Primary action on interior page heroes (solid dark fill)</td></tr>
+      <tr><td><code>.btn-outline-dark</code></td><td>White / cream sections</td><td>Secondary action on light backgrounds</td></tr>
+      <tr><td><code>.btn-light</code></td><td>Dark surfaces (CTA band, footer)</td><td>Primary action on dark bands</td></tr>
+      <tr><td><code>.btn-outline-light</code></td><td>Photo hero / dark nav</td><td>Hollow button over photography; fills white on hover</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="ds-section" id="cards">
+  <div class="container">
+    <div class="ds-label">Cards</div>
+    <div class="grid grid-3">
+      <div class="card ds-card-mini"><div class="card-thumb"><img src="assets/images/lifestyle-furniture-sofa.jpg" alt=""></div><h3>Card with Thumbnail</h3><p>Used for capability and market cards. Image bleeds to the card edges via negative margin.</p><a class="link" href="#">Explore &rarr;</a></div>
+      <div class="card ds-card-mini"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V13h6v8"/></svg></div><h3>Card with Icon</h3><p>Used on capability sub-pages (e.g. contract-furniture.html "What We Support").</p></div>
+      <div class="card-dark ds-card-mini"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="9"/></svg></div><h3>Dark Card</h3><p style="color:#cfcdc4;">Reserved variant for dark sections. Not currently used on any live page.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-section" id="nav">
+  <div class="container">
+    <div class="ds-label">Navigation</div>
+    <p style="max-width:640px; margin-bottom:1.4rem;">The header nav pill doubles as the hero-frame's "notch." Two items use hover/focus dropdowns (no JS) — Capabilities and Markets.</p>
+    <div style="background:var(--dark); border-radius:var(--radius); padding:32px; display:flex; justify-content:center;">
+      <nav class="main-nav" style="border-radius:var(--radius-xl);">
+        <div class="nav-dropdown"><a href="#" class="nav-dropdown-toggle active">Capabilities</a><div class="nav-dropdown-menu" style="opacity:1; visibility:visible; position:static; transform:none; box-shadow:none; margin-top:8px;"><a href="#" class="active">Contract Furniture</a><a href="#">Branding &amp; Wayfinding</a><a href="#">Portable Furnished Spaces</a></div></div>
+        <a href="#">About</a>
+        <a href="#">How We Work</a>
+        <a href="#">Selected Works</a>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<section class="ds-section" id="lists">
+  <div class="container">
+    <div class="ds-label">Lists &amp; Process</div>
+    <div class="grid grid-2">
+      <div>
+        <p style="font-weight:600; color:var(--ink); margin-bottom:.8rem;">Check list (values, audience)</p>
+        <ul class="check-list">
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 12l5 5L20 6"/></svg></span><div><strong>Architects and interior designers</strong> looking for a manufacturing partner.</div></li>
+          <li><span class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M4 12l5 5L20 6"/></svg></span><div><strong>General contractors</strong> procuring coordinated product packages.</div></li>
+        </ul>
+      </div>
+      <div>
+        <p style="font-weight:600; color:var(--ink); margin-bottom:.8rem;">Compact numbered process list</p>
+        <ol class="process-list">
+          <li><div class="row"><span class="num">1</span><h4>Scope Defined</h4></div><p>Drawings, quantities, and delivery conditions confirmed before production.</p></li>
+          <li><div class="row"><span class="num">2</span><h4>Approvals Documented</h4></div><p>Materials, finishes, and revisions move through recorded stages.</p></li>
+        </ol>
+      </div>
+    </div>
+    <p style="font-weight:600; color:var(--ink); margin:2.2rem 0 .8rem;">Full stepper (used on how-we-work.html)</p>
+    <div class="stepper" style="max-width:640px;">
+      <div class="step"><div class="num">1</div><div><h3>Submit</h3><p>The client provides drawings, schedules, specifications, and target dates.</p><span class="output">Output: Initial submission record.</span></div></div>
+      <div class="step"><div class="num">2</div><div><h3>Review</h3><p>We evaluate the package for fit, completeness, and technical feasibility.</p><span class="output">Output: Review response.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-section" id="forms">
+  <div class="container">
+    <div class="ds-label">Form Fields</div>
+    <div class="form-grid" style="max-width:640px;">
+      <div class="field"><label>Full Name</label><input type="text" placeholder="Jane Doe"></div>
+      <div class="field"><label>Email</label><input type="email" placeholder="jane@company.com"></div>
+      <div class="field full"><label>Project Notes <span class="hint">(optional)</span></label><textarea placeholder="Share drawings, schedules, and quantities..."></textarea></div>
+    </div>
+  </div>
+</section>
+
+<section class="ds-section" id="cta">
+  <div class="container">
+    <div class="ds-label">CTA Band &amp; Callout</div>
+    <div class="cta-band" style="margin-bottom:2rem;">
+      <div><h2>Have a project ready for review?</h2><p>Submit your drawings, schedules, and quantities.</p></div>
+      <div class="btn-row"><a href="#" class="btn btn-light">Submit a Project</a></div>
+    </div>
+    <p class="callout">Carve Creation&rsquo;s responsibility is limited to the services identified in the approved proposal.</p>
+  </div>
+</section>
+
+</body>
+</html>
