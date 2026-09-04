@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "carvecreation.com" }],
+      "destination": "https://www.carvecreation.com/:path*",
+      "permanent": true
+    }
+  ]
+}
