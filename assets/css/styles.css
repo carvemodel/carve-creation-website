@@ -389,7 +389,7 @@ img { max-width: 100%; display: block; }
 .card h3 { margin-bottom: .5em; line-height: 1.25; min-height: 2.5em; display: flex; align-items: flex-start; }
 .card-market h3 { min-height: 2.8em; display: flex; align-items: flex-start; }
 .card-app h3 { min-height: 0; margin-bottom: .35em; }
-#capabilities .card p { min-height: 9.6em; }
+#capabilities .card p { min-height: 6.4em; }
 .card-desc { font-size: .88rem; color: var(--muted); margin-bottom: 1.4em; line-height: 1.5; }
 
 .card-reveal { cursor: pointer; }
