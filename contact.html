@@ -7,7 +7,7 @@
 <meta name="description" content="Contact Carve Creation about a contract furniture, branding and wayfinding, architectural lighting, Carve Flex&trade;, or custom built-environment manufacturing project.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=151">
+<link rel="stylesheet" href="assets/css/styles.css?v=154">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect width=%2224%22 height=%2224%22 rx=%226%22 fill=%22%23a8662f%22/><text x=%2212%22 y=%2217%22 font-size=%2214%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22sans-serif%22>C</text></svg>">
 </head>
 <body class="">
@@ -44,7 +44,8 @@
 
 <section class="section">
   <div class="container">
-    <div class="section-head"><span class="eyebrow">Project Inquiry</span><h2></h2></div>
+    <div class="section-head"><span class="eyebrow">Project Inquiry</span><h2>Tell Us About Your Project.</h2></div>
+    <p>Share the information currently available. Complete drawings, specifications, and quantities are not required to begin.</p>
     <div class="split uneven" style="align-items:start;margin-top:1.6rem;">
 
       <div>
@@ -57,54 +58,60 @@
       </div>
 
       <div>
-        <div id="contact-confirmation" class="form-confirmation">
-          <h2>Thank You. Your Inquiry Has Been Received.</h2>
-          <p>Our team will review your project information and respond within one business day. If additional drawings, quantities, specifications, or delivery information are needed, we will identify them in our response.</p>
-          <p style="margin-top:1.2rem;"><a href="index.html" class="link">Return to Home &rarr;</a></p>
-        </div>
-        <form data-demo-form="#contact-confirmation">
+        <form id="contact-form">
           <h3 class="form-section-title">Contact Information</h3>
           <div class="form-grid">
-            <div class="field"><label>Name* </label><input type="text" name="name" placeholder=""></div>
-            <div class="field"><label>Company / Organization* </label><input type="text" name="company" placeholder=""></div>
-            <div class="field"><label>Work Email* </label><input type="email" name="email" placeholder=""></div>
-            <div class="field"><label>Phone Number </label><input type="tel" name="phone" placeholder=""></div>
+            <div class="field"><label>Name* </label><input type="text" name="name" placeholder="" required></div>
+            <div class="field"><label>Company / Organization* </label><input type="text" name="company" placeholder="" required></div>
+            <div class="field"><label>Email* </label><input type="email" name="email" placeholder="" required></div>
+            <div class="field"><label>Phone Number <span class="hint">Optional</span></label><input type="tel" name="phone" placeholder=""></div>
           </div>
 
           <h3 class="form-section-title">Project Information</h3>
           <div class="form-grid">
-            <div class="field"><label>Project Name* </label><input type="text" name="project_name" placeholder=""></div>
-            <div class="field"><label>Project Location* <span class="hint">City, state or province, and country</span></label><input type="text" name="project_location" placeholder=""></div>
-            <div class="field"><label>Your Role </label><select name="role"><option value="">Select&hellip;</option><option>Owner or Developer</option><option>Architect or Interior Designer</option><option>General Contractor</option><option>Purchasing or Procurement</option><option>Project Manager</option><option>Brand or Operator</option><option>Other</option></select></div>
-            <div class="field"><label>Market* </label><select name="market"><option value="">Select&hellip;</option><option>Hospitality</option><option>Workplace</option><option>Multifamily &amp; Mixed-Use</option><option>Retail, Food &amp; Beverage</option><option>Events &amp; Brand Activations</option><option>Healthcare &amp; Education</option><option>Other Commercial</option></select></div>
+            <div class="field"><label>Project Name <span class="hint">Optional</span></label><input type="text" name="project_name" placeholder=""></div>
+            <div class="field"><label>Project Location* <span class="hint">City, state/province, and country</span></label><input type="text" name="project_location" placeholder="" required></div>
+            <div class="field"><label>Your Role <span class="hint">Optional</span></label><select name="role"><option value="">Select&hellip;</option><option>Owner or Developer</option><option>Architect or Interior Designer</option><option>General Contractor</option><option>Purchasing or Procurement</option><option>Project Manager</option><option>Brand or Operator</option><option>Other</option></select></div>
+            <div class="field"><label>Market <span class="hint">Optional</span></label><select name="market"><option value="">Select&hellip;</option><option>Hospitality</option><option>Workplace</option><option>Multifamily &amp; Mixed-Use</option><option>Retail, Food &amp; Beverage</option><option>Events &amp; Brand Activations</option><option>Healthcare &amp; Education</option><option>Other Commercial</option></select></div>
 
             <div class="field full">
-              <label>What Do You Need?* <span class="hint">Allow multiple selections.</span></label>
+              <label>What Do You Need? <span class="hint">Select all that apply.</span></label>
               <div class="grid grid-2" style="gap:10px;margin-top:2px;">
-                <div class="checkbox-row"><input type="checkbox" id="need-furniture" name="needs" value="Contract Furniture"><label for="need-furniture">Contract Furniture</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-branding" name="needs" value="Branding &amp; Wayfinding"><label for="need-branding">Branding &amp; Wayfinding</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-lighting" name="needs" value="Architectural Lighting"><label for="need-lighting">Architectural Lighting</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-flex" name="needs" value="Carve Flex Deployable Spaces"><label for="need-flex">Carve Flex&trade; Deployable Spaces</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-coordinated" name="needs" value="Coordinated Multi-Product Package"><label for="need-coordinated">Coordinated Multi-Product Package</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-furniture" name="needs" value="Contract Furniture Package"><label for="need-furniture">Contract Furniture Package</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-branding" name="needs" value="Branding &amp; Wayfinding Package"><label for="need-branding">Branding &amp; Wayfinding Package</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-lighting" name="needs" value="Architectural Lighting Package"><label for="need-lighting">Architectural Lighting Package</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-flex" name="needs" value="Carve Flex Deployable Space"><label for="need-flex">Carve Flex&trade; Deployable Space</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-sculpture" name="needs" value="Public Art &amp; Sculpture Fabrication"><label for="need-sculpture">Public Art &amp; Sculpture Fabrication</label></div>
+                <div class="checkbox-row"><input type="checkbox" id="need-coordinated" name="needs" value="Coordinated Multi-Capability Package"><label for="need-coordinated">Coordinated Multi-Capability Package</label></div>
                 <div class="checkbox-row"><input type="checkbox" id="need-notsure" name="needs" value="Other / Not Sure Yet"><label for="need-notsure">Other / Not Sure Yet</label></div>
               </div>
             </div>
 
-            <div class="field"><label>Project Stage* </label><select name="project_stage"><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
-            <div class="field"><label>Estimated Manufacturing Budget </label><select name="budget"><option value="">Select&hellip;</option><option>Under $25,000</option><option>$25,000&ndash;$100,000</option><option>$100,000&ndash;$500,000</option><option>Over $500,000</option><option>Not Yet Established</option></select></div>
-            <div class="field"><label>Required Delivery Date </label><input type="date" name="delivery_date"></div>
-            <div class="field full"><label>Tell Us About the Project* </label><textarea name="project_details" placeholder="Describe the products, approximate quantities, materials, finishes, performance requirements, and delivery expectations currently known."></textarea></div>
+            <div class="field"><label>Project Stage* </label><select name="project_stage" required><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
+            <div class="field"><label>Estimated Budget for This Package <span class="hint">Optional</span></label><select name="budget"><option value="">Select&hellip;</option><option>Under $25,000</option><option>$25,000&ndash;$100,000</option><option>$100,000&ndash;$500,000</option><option>Over $500,000</option><option>Not Yet Established</option></select></div>
+            <div class="field"><label>Target Delivery Timing </label><select name="delivery_timing"><option value="">Select&hellip;</option><option>Within 3 Months</option><option>3&ndash;6 Months</option><option>6&ndash;12 Months</option><option>More Than 12 Months</option><option>Not Yet Determined</option></select></div>
+            <div class="field full"><label>Project Description* </label><textarea name="project_details" placeholder="Briefly describe what you are looking to manufacture or deploy. Include approximate quantities, project stage, desired materials or finishes, and any important schedule or site requirements currently known. It is okay if some information has not yet been determined." required></textarea></div>
           </div>
 
           <h3 class="form-section-title">Project Files</h3>
-          <p class="muted-note">Upload Available Files &mdash; drawings, schedules, specifications, renderings, quantity lists, finish information, or reference images.<br>Accepted formats: PDF, DWG, XLSX, DOCX, JPG, PNG and ZIP.</p>
+          <p class="muted-note">Upload anything currently available&mdash;drawings, schedules, specifications, renderings, quantity lists, finish information, or reference images. Complete documents are not required.<br>Accepted formats: PDF, DWG, XLSX, DOCX, JPG, PNG and ZIP.</p>
           <div class="file-drop" style="margin-bottom:20px;">
             <strong>Drag files here or click to upload</strong>
             <input type="file" multiple style="margin-top:10px;">
           </div>
 
+          <div class="form-grid">
+            <div class="field full"><label>File-Sharing Link <span class="hint">Optional &mdash; Dropbox, Google Drive, OneDrive, or WeTransfer</span></label><input type="url" name="file_link" placeholder="https://"></div>
+          </div>
+          <div class="checkbox-row" style="margin-top:6px;">
+            <input type="checkbox" id="confidential" name="confidential" value="Yes">
+            <label for="confidential">These files contain confidential information</label>
+          </div>
+          <p class="muted-note" style="margin-top:12px;">If an NDA or restricted file-handling procedure is required, contact us before uploading confidential materials.</p>
+
+          <p id="contact-form-error" class="muted-note" style="display:none;color:#b3261e;margin-top:1rem;"></p>
           <div style="margin-top:2rem;">
-            <button type="submit" class="btn btn-dark btn-block">Submit Project Inquiry</button>
+            <button type="submit" class="btn btn-dark btn-block">Submit Project for Review</button>
           </div>
         </form>
       </div>
@@ -164,5 +171,60 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var errorEl = document.getElementById('contact-form-error');
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (errorEl) { errorEl.style.display = 'none'; errorEl.textContent = ''; }
+
+    var formData = new FormData(form);
+    var payload = {};
+    formData.forEach(function (value, key) {
+      if (key === 'needs') {
+        if (!payload.needs) payload.needs = [];
+        payload.needs.push(value);
+      } else if (key === 'confidential') {
+        payload.confidential = true;
+      } else {
+        payload[key] = value;
+      }
+    });
+    if (!payload.confidential) payload.confidential = false;
+
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting…'; }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+      })
+      .then(function (result) {
+        if (result.ok) {
+          window.location.href = 'thank-you.html';
+        } else {
+          throw new Error((result.data && result.data.error) || 'Something went wrong. Please try again.');
+        }
+      })
+      .catch(function (err) {
+        if (errorEl) {
+          errorEl.textContent = err.message || 'Something went wrong. Please try again, or email sales@carvecreation.com directly.';
+          errorEl.style.display = 'block';
+          errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      })
+      .finally(function () {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Project for Review'; }
+      });
+  });
+})();
+</script>
 </body>
 </html>
