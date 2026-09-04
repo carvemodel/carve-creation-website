@@ -203,7 +203,7 @@ img { max-width: 100%; display: block; }
   height: var(--notch-r);
   padding: 0 72px;
   background: var(--white);
-  border-radius: 0 0 30px 30px;
+  border-radius: var(--radius-xl);
   box-sizing: border-box;
 }
 .main-nav a {
@@ -1091,6 +1091,9 @@ a.scope-badge:hover {
 .footer-brand .logo { color: var(--white); margin-bottom: 16px; }
 .footer-logo img { height: 40px; width: auto; display: block; }
 .footer-brand p { max-width: 300px; font-size: .92rem; }
+.footer-brand .footer-contact { margin-top: 14px; }
+.footer-brand .footer-contact a { color: #b6b4ab; font-weight: 600; }
+.footer-brand .footer-contact a:hover { color: var(--white); }
 .footer-col h4 {
   color: var(--white); font-family: var(--font-sans); font-size: .82rem;
   letter-spacing: .07em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700;
