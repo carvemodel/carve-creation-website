@@ -561,17 +561,17 @@ img { max-width: 100%; display: block; }
 
 /* ---------- List with icons (values, capabilities) ---------- */
 .check-list li {
-  display: flex; gap: 14px; padding: 14px 0;
+  display: flex; align-items: center; gap: 14px; padding: 14px 0;
   border-bottom: 1px solid var(--line);
 }
 .check-list li:last-child { border-bottom: none; }
 .check-list .bullet {
-  width: 22px; height: 22px; flex: none; margin-top: 3px;
+  width: 22px; height: 22px; flex: none;
   border-radius: 50%; background: var(--accent-soft); color: var(--accent-dark);
   display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700;
 }
 .check-list strong { color: var(--ink); }
-.check-list li > div { white-space: nowrap; font-size: .96rem; }
+.check-list li > div { white-space: nowrap; font-size: .96rem; line-height: 1.3; }
 
 .plain-list li {
   padding: 8px 0 8px 20px;
