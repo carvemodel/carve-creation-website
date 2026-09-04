@@ -38,7 +38,7 @@ module.exports = async function handler(req, res) {
     name, company, email, phone,
     project_name, project_location, role, market,
     needs, project_stage, budget, delivery_timing,
-    project_details, file_link, confidential
+    project_details, file_link
   } = body;
 
   if (!name || !company || !email || !project_location || !project_stage || !project_details) {
@@ -64,7 +64,6 @@ module.exports = async function handler(req, res) {
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Target Delivery Timing</td><td>${escapeHtml(delivery_timing || 'Not provided')}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Project Description</td><td style="padding-top:12px;white-space:pre-wrap;">${escapeHtml(project_details)}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;">File-Sharing Link</td><td style="padding-top:12px;">${escapeHtml(file_link || 'None provided')}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Confidential Files</td><td>${confidential ? 'Yes' : 'No'}</td></tr>
     </table>
   `;
 

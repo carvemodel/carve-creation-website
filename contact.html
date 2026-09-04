@@ -103,11 +103,6 @@
           <div class="form-grid">
             <div class="field full"><label>File-Sharing Link <span class="hint">Optional &mdash; Dropbox, Google Drive, OneDrive, or WeTransfer</span></label><input type="url" name="file_link" placeholder="https://"></div>
           </div>
-          <div class="checkbox-row" style="margin-top:6px;">
-            <input type="checkbox" id="confidential" name="confidential" value="Yes">
-            <label for="confidential">These files contain confidential information</label>
-          </div>
-          <p class="muted-note" style="margin-top:12px;">If an NDA or restricted file-handling procedure is required, contact us before uploading confidential materials.</p>
 
           <p id="contact-form-error" class="muted-note" style="display:none;color:#b3261e;margin-top:1rem;"></p>
           <div style="margin-top:2rem;">
@@ -188,13 +183,10 @@
       if (key === 'needs') {
         if (!payload.needs) payload.needs = [];
         payload.needs.push(value);
-      } else if (key === 'confidential') {
-        payload.confidential = true;
       } else {
         payload[key] = value;
       }
     });
-    if (!payload.confidential) payload.confidential = false;
 
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting…'; }
 
