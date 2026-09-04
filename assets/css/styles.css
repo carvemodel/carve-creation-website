@@ -203,8 +203,16 @@ img { max-width: 100%; display: block; }
   height: var(--notch-r);
   padding: 0 72px;
   background: var(--white);
-  border-radius: var(--radius-xl);
+  border-radius: 0 0 30px 30px;
   box-sizing: border-box;
+  -webkit-mask-image:
+    radial-gradient(circle at 0 0, transparent var(--radius-xl), black var(--radius-xl)),
+    radial-gradient(circle at 100% 0, transparent var(--radius-xl), black var(--radius-xl));
+  -webkit-mask-composite: source-over, source-in;
+  mask-image:
+    radial-gradient(circle at 0 0, transparent var(--radius-xl), black var(--radius-xl)),
+    radial-gradient(circle at 100% 0, transparent var(--radius-xl), black var(--radius-xl));
+  mask-composite: add, intersect;
 }
 .main-nav a {
   color: var(--muted);
@@ -1136,6 +1144,8 @@ a.scope-badge:hover {
   .hero-frame { border-radius: 20px; }
   .hero-notch { display: none; }
   .main-nav {
+    -webkit-mask-image: none;
+    mask-image: none;
     position: fixed; top: 88px; left: 0; right: 0; bottom: 0;
     height: auto;
     background: var(--dark);
