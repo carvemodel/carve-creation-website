@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var slides = heroSlider.querySelectorAll('.hero-slide');
     var dots = heroSlider.querySelectorAll('.hero-dot');
     var current = 0;
-    var rotateMs = 6500;
+    var rotateMs = 5000;
     var timer;
 
     function goTo(index) {
