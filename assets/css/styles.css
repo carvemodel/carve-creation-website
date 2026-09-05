@@ -1070,9 +1070,11 @@ a.scope-badge:hover {
   transition: opacity .2s ease, filter .2s ease;
 }
 .logo-wall-item:hover { filter: grayscale(0%); opacity: 1; }
+.logo-wall-item--lg { height: 72px; max-width: 220px; }
 @media (max-width: 640px) {
   .logo-wall-row { gap: 16px 28px; }
   .logo-wall-item { height: 40px; }
+  .logo-wall-item--lg { height: 56px; }
 }
 
 /* ---------- CTA band ---------- */
