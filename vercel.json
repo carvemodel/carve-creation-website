@@ -6,6 +6,26 @@
       "has": [{ "type": "host", "value": "carvecreation.com" }],
       "destination": "https://www.carvecreation.com/:path*",
       "permanent": true
-    }
+    },
+    { "source": "/scale-model-services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
+    { "source": "/architectural-scale-models", "destination": "https://www.physical-model.com/architectural-scale-models", "permanent": true },
+    { "source": "/scale-model-services/product", "destination": "https://www.physical-model.com/scale-model-services/product", "permanent": true },
+    { "source": "/scale-model-services/film", "destination": "https://www.physical-model.com/scale-model-services/film", "permanent": true },
+    { "source": "/scale-model-services/art", "destination": "https://www.physical-model.com/scale-model-services/art", "permanent": true },
+    { "source": "/model-making-process", "destination": "https://www.physical-model.com/model-making-process", "permanent": true },
+    { "source": "/blog", "destination": "https://www.physical-model.com/blog", "permanent": true },
+    { "source": "/blog/architectural-model-packaging-shipping-installation", "destination": "https://www.physical-model.com/blog/architectural-model-packaging-shipping-installation", "permanent": true },
+    { "source": "/blog/architectural-scale-model-cost-us", "destination": "https://www.physical-model.com/blog/architectural-scale-model-cost-us", "permanent": true },
+    { "source": "/blog/atlanta-mixed-use-architectural-model-installation", "destination": "https://www.physical-model.com/blog/atlanta-mixed-use-architectural-model-installation", "permanent": true },
+    { "source": "/blog/carve-model-aia26-conference", "destination": "https://www.physical-model.com/blog/carve-model-aia26-conference", "permanent": true },
+    { "source": "/blog/carve-studio-portal-partner-testing", "destination": "https://www.physical-model.com/blog/carve-studio-portal-partner-testing", "permanent": true },
+    { "source": "/blog/from-ai-generated-image-to-physical-model", "destination": "https://www.physical-model.com/blog/from-ai-generated-image-to-physical-model", "permanent": true },
+    { "source": "/blog/how-long-to-build-architectural-model", "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model", "permanent": true },
+    { "source": "/blog/how-to-choose-architectural-model-scale", "destination": "https://www.physical-model.com/blog/how-to-choose-architectural-model-scale", "permanent": true },
+    { "source": "/blog/how-to-prepare-an-architectural-model-brief", "destination": "https://www.physical-model.com/blog/how-to-prepare-an-architectural-model-brief", "permanent": true },
+    { "source": "/blog/new-carve-model-website-launch", "destination": "https://www.physical-model.com/blog/new-carve-model-website-launch", "permanent": true },
+    { "source": "/blog/physical-models-vs-renderings-animation-ar-vr", "destination": "https://www.physical-model.com/blog/physical-models-vs-renderings-animation-ar-vr", "permanent": true },
+    { "source": "/blog/types-of-architectural-scale-models", "destination": "https://www.physical-model.com/blog/types-of-architectural-scale-models", "permanent": true },
+    { "source": "/blog/why-physical-verification-matters-in-digital-design", "destination": "https://www.physical-model.com/blog/why-physical-verification-matters-in-digital-design", "permanent": true }
   ]
 }
