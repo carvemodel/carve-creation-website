@@ -26,6 +26,15 @@
     { "source": "/blog/new-carve-model-website-launch", "destination": "https://www.physical-model.com/blog/new-carve-model-website-launch", "permanent": true },
     { "source": "/blog/physical-models-vs-renderings-animation-ar-vr", "destination": "https://www.physical-model.com/blog/physical-models-vs-renderings-animation-ar-vr", "permanent": true },
     { "source": "/blog/types-of-architectural-scale-models", "destination": "https://www.physical-model.com/blog/types-of-architectural-scale-models", "permanent": true },
-    { "source": "/blog/why-physical-verification-matters-in-digital-design", "destination": "https://www.physical-model.com/blog/why-physical-verification-matters-in-digital-design", "permanent": true }
+    { "source": "/blog/why-physical-verification-matters-in-digital-design", "destination": "https://www.physical-model.com/blog/why-physical-verification-matters-in-digital-design", "permanent": true },
+    { "source": "/about-carve-model", "destination": "https://www.physical-model.com/about-carve-model", "permanent": true },
+    { "source": "/works", "destination": "https://www.physical-model.com/works", "permanent": true },
+    { "source": "/architectural-scale-model-services-carve-model", "destination": "https://www.physical-model.com/architectural-scale-models", "permanent": true },
+    { "source": "/model-services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
+    { "source": "/services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
+    { "source": "/product-prototype", "destination": "https://www.physical-model.com/scale-model-services/product", "permanent": true },
+    { "source": "/film-previsualization", "destination": "https://www.physical-model.com/scale-model-services/film", "permanent": true },
+    { "source": "/portfolio-scale-models", "destination": "https://www.physical-model.com/works", "permanent": true },
+    { "source": "/blog/architectural-scale-model-production-timeline", "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model", "permanent": true }
   ]
 }
