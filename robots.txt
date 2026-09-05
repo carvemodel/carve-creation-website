@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /portal-
+Disallow: /design-system.html
+Disallow: /custom-project-review.html
+Disallow: /submit-a-project.html
+
+Sitemap: https://www.carvecreation.com/sitemap.xml

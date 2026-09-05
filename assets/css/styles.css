@@ -1042,6 +1042,39 @@ a.scope-badge:hover {
   .testimonial-card { flex-basis: 260px; }
 }
 
+/* ---------- Logo wall ---------- */
+.logo-wall { padding: 56px 0; }
+.logo-wall-label {
+  text-align: center;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 30px;
+}
+.logo-wall-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 48px;
+}
+.logo-wall-item {
+  height: 34px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: .55;
+  transition: opacity .2s ease, filter .2s ease;
+}
+.logo-wall-item:hover { filter: grayscale(0%); opacity: 1; }
+@media (max-width: 640px) {
+  .logo-wall-row { gap: 16px 28px; }
+  .logo-wall-item { height: 26px; }
+}
+
 /* ---------- CTA band ---------- */
 .cta-band {
   background: var(--dark);
