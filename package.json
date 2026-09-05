@@ -1,0 +1,9 @@
+{
+  "name": "carve-creation-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Carve Creation marketing site (static HTML) plus Vercel serverless functions for the contact form and project file uploads.",
+  "dependencies": {
+    "@vercel/blob": "^2.8.0"
+  }
+}

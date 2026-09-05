@@ -29,8 +29,7 @@
   --success-soft: #eef8e6;
   --brand-green: #83953f;
 
-  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --container: 1180px;
   --radius: 14px;
@@ -67,7 +66,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-base);
   color: var(--ink);
   background: var(--white);
   line-height: var(--lh-relaxed);
@@ -75,7 +74,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
+  font-family: var(--font-base);
   font-weight: 700;
   line-height: var(--lh-tight);
   margin: 0 0 .6em;
@@ -207,7 +206,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-serif);
+  font-family: var(--font-base);
   font-size: var(--fs-lg);
   font-weight: 600;
   color: var(--white);
@@ -218,7 +217,7 @@ img { max-width: 100%; display: block; }
   background: rgba(255,255,255,.15);
   display: flex; align-items: center; justify-content: center;
   color: var(--white); font-size: var(--fs-base); font-weight: 700;
-  font-family: var(--font-sans);
+  font-family: var(--font-base);
 }
 .main-nav {
   grid-column: 2;
@@ -340,7 +339,7 @@ img { max-width: 100%; display: block; }
 }
 .hero .container { position: relative; }
 .hero-inner { max-width: 1040px; }
-.hero-inner h1 { font-size: var(--fs-hero-h1); white-space: nowrap; }
+.hero-inner h1, .hero-inner h2 { font-size: var(--fs-hero-h1); font-weight: 700; white-space: nowrap; }
 .hero p.lede { font-size: 1.12rem; color: #cbc9bf; max-width: 640px; }
 .hero-inner p.lede { max-width: none; white-space: nowrap; }
 .hero .support-line {
@@ -384,9 +383,6 @@ img { max-width: 100%; display: block; }
 .hero-slider::before { display: none; }
 .hero-slide {
   position: absolute; inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -396,20 +392,27 @@ img { max-width: 100%; display: block; }
   z-index: 0;
 }
 .hero-slide.active { opacity: 1; visibility: visible; z-index: 1; }
+/* Media layer (picture/img) replaces the old CSS background-image so each
+   slide can carry its own responsive AVIF/WebP sources, explicit
+   width/height, and priority/lazy loading hints. */
+.hero-slide-media { position: absolute; inset: 0; z-index: 0; }
+.hero-slide-img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.hero-slide-media--bottom .hero-slide-img { object-position: center bottom; }
 .hero-slide::after {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(15,15,13,.25) 0%, rgba(15,15,13,.55) 100%);
-  z-index: 0;
+  z-index: 1;
 }
-.hero-slide .container { position: relative; z-index: 1; width: 100%; }
+.hero-slide .container { position: relative; z-index: 2; width: 100%; }
 .hero-slide h1,
+.hero-slide h2,
 .hero-slide .eyebrow,
 .hero-slide p.lede,
 .hero-slide .support-line {
   text-shadow: 0 2px 18px rgba(0,0,0,.55);
 }
-.hero-inner.wrap h1 { white-space: normal; max-width: 780px; }
+.hero-inner.wrap h1, .hero-inner.wrap h2 { white-space: normal; max-width: 780px; }
 .hero-inner.wrap p.lede { white-space: normal; max-width: 640px; }
 .hero-dots {
   position: absolute;
@@ -804,7 +807,7 @@ img { max-width: 100%; display: block; }
   width: 56px; height: 56px; border-radius: 50%;
   background: var(--accent);
   color: var(--white);
-  font-family: var(--font-serif);
+  font-family: var(--font-base);
   font-size: var(--fs-lg); font-weight: 600;
   display: flex; align-items: center; justify-content: center;
 }
@@ -829,7 +832,7 @@ img { max-width: 100%; display: block; }
   gap: 16px;
   background: none; border: none; text-align: left;
   padding: 20px 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-base);
   font-size: 1rem; font-weight: 600; color: var(--ink);
   cursor: pointer;
 }
@@ -898,7 +901,7 @@ img { max-width: 100%; display: block; }
 .field input,
 .field select,
 .field textarea {
-  font-family: var(--font-sans);
+  font-family: var(--font-base);
   font-size: var(--fs-base);
   padding: 13px 16px;
   border: 1px solid var(--line);
@@ -927,6 +930,25 @@ img { max-width: 100%; display: block; }
   font-size: var(--fs-base);
 }
 .file-drop strong { color: var(--ink); display: block; margin-bottom: 6px; font-size: var(--fs-base); }
+.file-drop.dragover { border-color: var(--accent); background: var(--cream); color: var(--ink); }
+.file-drop-list { list-style: none; margin: 16px 0 0; padding: 0; text-align: left; }
+.file-drop-list:empty { margin: 0; }
+.file-drop-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  background: var(--white); font-size: var(--fs-sm); color: var(--ink);
+}
+.file-drop-item + .file-drop-item { margin-top: 8px; }
+.file-drop-item .file-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-drop-item .file-size { color: var(--muted-2); flex-shrink: 0; }
+.file-drop-item .file-status { color: var(--muted-2); flex-shrink: 0; }
+.file-drop-item.is-error .file-status { color: #b3261e; }
+.file-drop-item.is-done .file-status { color: var(--success); }
+.file-drop-item .file-remove {
+  border: none; background: none; color: var(--muted-2); cursor: pointer; font-size: 1.1em;
+  line-height: 1; padding: 2px 4px; flex-shrink: 0;
+}
+.file-drop-item .file-remove:hover { color: var(--accent-dark); }
 
 .form-confirmation {
   display: none;
@@ -951,7 +973,7 @@ img { max-width: 100%; display: block; }
 .callout {
   border-left: 3px solid var(--accent);
   padding: 6px 0 6px 26px;
-  font-family: var(--font-serif);
+  font-family: var(--font-base);
   font-size: var(--fs-lg);
   color: var(--ink);
   margin: 1.6rem 0;
@@ -1243,7 +1265,7 @@ a.scope-badge:hover {
 .footer-brand .footer-contact a { color: #b6b4ab; font-weight: 600; }
 .footer-brand .footer-contact a:hover { color: var(--white); }
 .footer-col h4 {
-  color: var(--white); font-family: var(--font-sans); font-size: var(--fs-xs);
+  color: var(--white); font-family: var(--font-base); font-size: var(--fs-xs);
   letter-spacing: .07em; text-transform: uppercase; margin-bottom: 18px; font-weight: 700;
 }
 .footer-col li { margin-bottom: 12px; }
@@ -1279,10 +1301,13 @@ a.scope-badge:hover {
   .split.reverse .split-text { order: 2; }
 }
 
-@media (max-width: 720px) {
-  :root { --frame: 12px; }
-  .hero-frame { border-radius: 20px; }
-  .hero-notch { display: none; }
+/* Condensed nav activates earlier (1400px) than the general mobile layout
+   breakpoint below, because the desktop nav pill + header CTAs run out of
+   room and overlap the Project Portal button well before true mobile
+   widths. Hero headlines/ledes also drop their forced single-line
+   white-space here for the same reason (they were clipping in that
+   in-between range). */
+@media (max-width: 1400px) {
   .main-nav::before, .main-nav::after { display: none; }
   .main-nav {
     position: fixed; top: 88px; left: 0; right: 0; bottom: 0;
@@ -1324,6 +1349,14 @@ a.scope-badge:hover {
   }
   .nav-dropdown-menu a { color: var(--muted-2); width: 100%; padding: 11px 0; border-bottom: 1px solid var(--line-dark); }
   .nav-dropdown-menu a:hover, .nav-dropdown-menu a.active { background: none; color: var(--white); }
+  .hero-inner h1, .hero-inner h2 { white-space: normal; }
+  .hero-inner p.lede { white-space: normal; }
+}
+
+@media (max-width: 720px) {
+  :root { --frame: 12px; }
+  .hero-frame { border-radius: 20px; }
+  .hero-notch { display: none; }
   .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .form-grid { grid-template-columns: 1fr; }
@@ -1331,8 +1364,7 @@ a.scope-badge:hover {
   .section { padding: 64px 0; }
   .step { grid-template-columns: 44px 1fr; gap: 16px; }
   .step .num { width: 44px; height: 44px; font-size: var(--fs-md); }
-  .hero-inner h1 { white-space: normal; font-size: var(--fs-hero-h1-mobile); }
-  .hero-inner p.lede { white-space: normal; }
+  .hero-inner h1, .hero-inner h2 { font-size: var(--fs-hero-h1-mobile); }
   .check-list li > div { white-space: normal; font-size: 1rem; }
   .nowrap-heading { white-space: normal; }
   .one-line-heading { white-space: normal; font-size: var(--fs-one-line-mobile); }

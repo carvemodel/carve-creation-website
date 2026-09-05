@@ -127,5 +127,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     if (slides.length > 1) startRotation();
+
+    // Defer network fetch of non-active slide images until after the page
+    // (and the priority first hero image) has finished loading, so the
+    // browser never contends bandwidth between the active hero and the
+    // hidden carousel slides sitting in the same viewport.
+    function loadDeferredHeroMedia() {
+      heroSlider.querySelectorAll('.hero-slide-media source[data-srcset]').forEach(function (source) {
+        source.setAttribute('srcset', source.getAttribute('data-srcset'));
+        source.removeAttribute('data-srcset');
+      });
+      heroSlider.querySelectorAll('.hero-slide-media img[data-src]').forEach(function (img) {
+        if (img.hasAttribute('data-srcset')) {
+          img.setAttribute('srcset', img.getAttribute('data-srcset'));
+          img.removeAttribute('data-srcset');
+        }
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.removeAttribute('data-src');
+      });
+    }
+    if (document.readyState === 'complete') {
+      setTimeout(loadDeferredHeroMedia, 300);
+    } else {
+      window.addEventListener('load', function () {
+        setTimeout(loadDeferredHeroMedia, 300);
+      });
+    }
   }
 });

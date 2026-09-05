@@ -38,7 +38,7 @@ module.exports = async function handler(req, res) {
     name, company, email, phone,
     project_name, project_location, role, market,
     needs, project_stage, budget, delivery_timing,
-    project_details, file_link
+    project_details, file_link, files
   } = body;
 
   if (!name || !company || !email || !project_location || !project_stage) {
@@ -46,6 +46,16 @@ module.exports = async function handler(req, res) {
   }
 
   const needsList = Array.isArray(needs) ? needs.join(', ') : (needs || 'Not specified');
+
+  // `files` is an array of { name, url, size } uploaded client-side directly to
+  // Vercel Blob (see api/blob-upload.js) before this endpoint was called, so
+  // only the resulting links pass through here -- not the file bytes.
+  const uploadedFiles = Array.isArray(files) ? files.filter(function (f) { return f && f.url; }) : [];
+  const filesHtml = uploadedFiles.length
+    ? uploadedFiles.map(function (f) {
+        return '<a href="' + escapeHtml(f.url) + '">' + escapeHtml(f.name || f.url) + '</a>';
+      }).join('<br>')
+    : 'None uploaded';
 
   const html = `
     <h2 style="font-family:sans-serif;">New Project Inquiry &mdash; Carve Creation Website</h2>
@@ -64,6 +74,7 @@ module.exports = async function handler(req, res) {
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Target Delivery Timing</td><td>${escapeHtml(delivery_timing || 'Not provided')}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Project Description</td><td style="padding-top:12px;white-space:pre-wrap;">${escapeHtml(project_details || 'Not provided')}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;">File-Sharing Link</td><td style="padding-top:12px;">${escapeHtml(file_link || 'None provided')}</td></tr>
+      <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Uploaded Files</td><td style="padding-top:12px;">${filesHtml}</td></tr>
     </table>
   `;
 
