@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.carvecreation.com/market-hospitality.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=230">
+<link rel="stylesheet" href="assets/css/styles.css?v=233">
 <link rel="icon" type="image/png" href="assets/images/Favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.carvecreation.com/"}, {"@type": "ListItem", "position": 2, "name": "Markets", "item": "https://www.carvecreation.com/markets.html"}, {"@type": "ListItem", "position": 3, "name": "Hospitality & Estate", "item": "https://www.carvecreation.com/market-hospitality.html"}]}</script>
 </head>
@@ -71,24 +71,89 @@
 
 <section class="section">
   <div class="container">
+    <div class="section-head"><span class="eyebrow">Related Reading</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="hospitality-insights-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:200px;">
+          <a href="insight-coordinated-hospitality-manufacturing.html" style="display:block;width:100%;height:100%;"><img src="assets/images/hero-hotel3.jpg" alt="Hospitality project built through coordinated manufacturing" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="1200" height="660" loading="lazy"></a>
+        </div>
+        <a href="insight-coordinated-hospitality-manufacturing.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>Why Hospitality Projects Need a Coordinated Manufacturing Strategy</h3>
+          <p class="muted-note" style="min-height:3.2em;">Learn how a coordinated manufacturing strategy helps hospitality and luxury residential projects protect design intent, manage complexity, and deliver a consistent guest experience.</p>
+        </a>
+        <a href="insight-coordinated-hospitality-manufacturing.html" class="link" style="margin-top:auto;">Read the Insight <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="hospitality-insights-prev" aria-label="Previous articles">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="hospitality-insights-next" aria-label="Next articles">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('hospitality-insights-track');
+  var prev = document.getElementById('hospitality-insights-prev');
+  var next = document.getElementById('hospitality-insights-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
+<section class="section section-cream">
+  <div class="container">
     <div class="section-head"><span class="eyebrow">How Carve Creation Responds</span><h2></h2></div>
     <p>We begin with the approved design intent and identify the decisions required for manufacturing. Materials, details, finishes, samples, quantities, responsibilities, and delivery conditions are consolidated into a controlled project standard.</p>
     <p style="margin-top:1.5rem;">DfMA-led development and precision manufacturing help make custom elements practical to produce. Samples and milestone inspections protect the approved aesthetic, while the project portal keeps drawings, approvals, production updates, and delivery information visible to the project team.</p>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Selected Work</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="hospitality-work-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:230px;">
+          <a href="project-riverside-hotel.html" style="display:block;width:100%;height:100%;"><img src="assets/images/lifestyle-dining-pendant.jpg" alt="Project environment photo" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="314" height="216" loading="lazy"></a>
+          <div style="position:absolute;left:12px;bottom:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:2;">
+            <a href="case-studies.html?capability=contract-furniture" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Contract Furniture</a>
+            <a href="case-studies.html?market=hospitality-estate" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Hospitality &amp; Estate</a>
+          </div>
+        </div>
+        <a href="project-riverside-hotel.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>Riverside Hotel</h3>
+          <p class="muted-note">Portland, OR &middot; 2025</p>
+          <p class="muted-note" style="min-height:3.2em;">Guestroom &amp; public-area furniture package</p>
+        </a>
+        <a href="project-riverside-hotel.html" class="link" style="margin-top:auto;">View Selected Work <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="hospitality-work-prev" aria-label="Previous projects">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="hospitality-work-next" aria-label="Next projects">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('hospitality-work-track');
+  var prev = document.getElementById('hospitality-work-prev');
+  var next = document.getElementById('hospitality-work-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
 <section class="section section-cream">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Five Capabilities, One Project Standard</span><h2></h2></div>
     <p>All Carve Creation capabilities can support hospitality and estate projects individually or as a coordinated package:</p>
-    <div class="grid grid-3" style="margin-top:2rem;">
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-hotel.jpg" alt="Loose furniture in a finished interior" width="1920" height="1080" loading="lazy"></div><h3 class="fit-line">Contract Furniture Packages</h3><p>Custom casegoods, seating, tables, banquettes, counters, and coordinated furniture families manufactured for hospitality and commercial projects.</p><a class="link" href="contract-furniture.html">Explore Contract Furniture &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-wayfinding.jpg" alt="Branded wayfinding signage in an interior environment" width="750" height="410" loading="lazy"></div><h3 class="fit-line">Branding &amp; Wayfinding Packages</h3><p>Building identification, dimensional logos, directories, directional signage, and branded features developed as coordinated visual systems.</p><a class="link" href="branding-wayfinding.html">Explore Branding &amp; Wayfinding &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/pod-hero.jpg" alt="Modular shelving and adaptable storage components" width="2364" height="1330" loading="lazy"></div><h3 class="fit-line">Carve Flex&trade;<br>Deployable Spaces</h3><p>Finished, transportable environments combining furniture, signage, architectural lighting, structural components, and MEP systems in one coordinated package.</p><a class="link" href="deployable-spaces.html">Explore Deployable Spaces &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-lighting.jpg" alt="Architectural pendant lighting in a finished interior" width="750" height="544" loading="lazy"></div><h3 class="fit-line">Architectural Lighting Packages</h3><p>Decorative and architectural fixtures coordinated around the approved design, finishes, mounting conditions, electrical requirements, and project schedule.</p><a class="link" href="architectural-lighting.html">Explore Architectural Lighting &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-public-art.webp" alt="Public art installation in an outdoor environment" width="2884" height="1649" loading="lazy"></div><h3 class="fit-line">Public Art &amp; Sculpture</h3><p>Site-specific sculpture, architectural ornament, and artist-designed installations fabricated for civic, commercial, hospitality, and institutional environments.</p><a class="link" href="public-sculpture.html">Explore Public Art &amp; Sculpture &rarr;</a></div>
-    </div>
-    <p class="muted-note" style="margin-top:1.5rem;">Related insight: <a href="insight-coordinated-hospitality-manufacturing.html">Why Hospitality Projects Need Coordinated Manufacturing</a></p>
+    <ul class="plain-list" style="margin-top:1.5rem;"><li><a href="contract-furniture.html">Contract Furniture</a></li><li><a href="branding-wayfinding.html">Branding &amp; Wayfinding</a></li><li><a href="architectural-lighting.html">Architectural Lighting</a></li><li><a href="deployable-spaces.html">Carve Flex&trade; Deployable Spaces</a></li><li><a href="public-sculpture.html">Public Art &amp; Sculpture</a></li></ul>
+    <a class="link" href="index.html#capabilities" style="margin-top:1.5rem;display:inline-block;">Explore All Capabilities &rarr;</a>
   </div>
 </section>
 

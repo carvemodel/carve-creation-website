@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.carvecreation.com/market-retail-food-beverage.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=230">
+<link rel="stylesheet" href="assets/css/styles.css?v=234">
 <link rel="icon" type="image/png" href="assets/images/Favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.carvecreation.com/"}, {"@type": "ListItem", "position": 2, "name": "Markets", "item": "https://www.carvecreation.com/markets.html"}, {"@type": "ListItem", "position": 3, "name": "Retail & Food and Beverage", "item": "https://www.carvecreation.com/market-retail-food-beverage.html"}]}</script>
 </head>
@@ -71,24 +71,89 @@
 
 <section class="section">
   <div class="container">
+    <div class="section-head"><span class="eyebrow">Related Reading</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="retail-insights-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:200px;">
+          <a href="insight-multi-location-brand-standards.html" style="display:block;width:100%;height:100%;"><img src="assets/images/lifestyle-dining-blue-drapes.jpg" alt="Multi-location retail and food and beverage brand standard" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="314" height="216" loading="lazy"></a>
+        </div>
+        <a href="insight-multi-location-brand-standards.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>From One Location to Many: Controlling the Physical Brand Standard</h3>
+          <p class="muted-note" style="min-height:3.2em;">Learn how retailers and food-and-beverage brands can translate one design concept into a controlled physical standard across multiple locations and formats.</p>
+        </a>
+        <a href="insight-multi-location-brand-standards.html" class="link" style="margin-top:auto;">Read the Insight <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="retail-insights-prev" aria-label="Previous articles">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="retail-insights-next" aria-label="Next articles">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('retail-insights-track');
+  var prev = document.getElementById('retail-insights-prev');
+  var next = document.getElementById('retail-insights-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
+<section class="section section-cream">
+  <div class="container">
     <div class="section-head"><span class="eyebrow">How Carve Creation Responds</span><h2></h2></div>
     <p>We translate approved concepts into a controlled physical standard that can be produced for one location or adapted across a rollout. Prototypes and first-location approvals can establish the materials, finishes, construction, and acceptance criteria for repeat production.</p>
     <p style="margin-top:1.5rem;">DfMA-led development, precision manufacturing, milestone inspections, and location-coded packaging help protect brand consistency while supporting site-specific quantities and delivery schedules. Project-portal visibility gives brand, design, procurement, and construction teams one record of approvals and progress.</p>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Selected Work</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="retail-work-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:230px;">
+          <a href="project-meridian-coffee-rollout.html" style="display:block;width:100%;height:100%;"><img src="assets/images/lifestyle-dining-blue-drapes.jpg" alt="Project environment photo" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="314" height="216" loading="lazy"></a>
+          <div style="position:absolute;left:12px;bottom:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:2;">
+            <a href="case-studies.html?capability=wayfinding" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Wayfinding Systems</a>
+            <a href="case-studies.html?market=retail-food-beverage" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Retail &amp; Food and Beverage</a>
+          </div>
+        </div>
+        <a href="project-meridian-coffee-rollout.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>Meridian Coffee Rollout</h3>
+          <p class="muted-note">Denver, CO &middot; 2025</p>
+          <p class="muted-note" style="min-height:3.2em;">Branded interior signage &amp; wayfinding rollout package</p>
+        </a>
+        <a href="project-meridian-coffee-rollout.html" class="link" style="margin-top:auto;">View Selected Work <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="retail-work-prev" aria-label="Previous projects">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="retail-work-next" aria-label="Next projects">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('retail-work-track');
+  var prev = document.getElementById('retail-work-prev');
+  var next = document.getElementById('retail-work-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
 <section class="section section-cream">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Five Capabilities, One Project Standard</span><h2></h2></div>
     <p>All Carve Creation capabilities can support retail and food-and-beverage environments:</p>
-    <div class="grid grid-3" style="margin-top:2rem;">
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-hotel.jpg" alt="Loose furniture in a finished interior" width="1920" height="1080" loading="lazy"></div><h3 class="fit-line">Contract Furniture Packages</h3><p>Custom casegoods, seating, tables, banquettes, counters, and coordinated furniture families manufactured for hospitality and commercial projects.</p><a class="link" href="contract-furniture.html">Explore Contract Furniture &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-wayfinding.jpg" alt="Branded wayfinding signage in an interior environment" width="750" height="410" loading="lazy"></div><h3 class="fit-line">Branding &amp; Wayfinding Packages</h3><p>Building identification, dimensional logos, directories, directional signage, and branded features developed as coordinated visual systems.</p><a class="link" href="branding-wayfinding.html">Explore Branding &amp; Wayfinding &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/pod-hero.jpg" alt="Modular shelving and adaptable storage components" width="2364" height="1330" loading="lazy"></div><h3 class="fit-line">Carve Flex&trade;<br>Deployable Spaces</h3><p>Finished, transportable environments combining furniture, signage, architectural lighting, structural components, and MEP systems in one coordinated package.</p><a class="link" href="deployable-spaces.html">Explore Deployable Spaces &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-lighting.jpg" alt="Architectural pendant lighting in a finished interior" width="750" height="544" loading="lazy"></div><h3 class="fit-line">Architectural Lighting Packages</h3><p>Decorative and architectural fixtures coordinated around the approved design, finishes, mounting conditions, electrical requirements, and project schedule.</p><a class="link" href="architectural-lighting.html">Explore Architectural Lighting &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-public-art.webp" alt="Public art installation in an outdoor environment" width="2884" height="1649" loading="lazy"></div><h3 class="fit-line">Public Art &amp; Sculpture</h3><p>Site-specific sculpture, architectural ornament, and artist-designed installations fabricated for civic, commercial, hospitality, and institutional environments.</p><a class="link" href="public-sculpture.html">Explore Public Art &amp; Sculpture &rarr;</a></div>
-    </div>
-    <p class="muted-note" style="margin-top:1.5rem;">Related insight: <a href="insight-multi-location-brand-standards.html">Controlling Physical Brand Standards Across Locations</a></p>
+    <ul class="plain-list" style="margin-top:1.5rem;"><li><a href="contract-furniture.html">Contract Furniture</a></li><li><a href="branding-wayfinding.html">Branding &amp; Wayfinding</a></li><li><a href="architectural-lighting.html">Architectural Lighting</a></li><li><a href="deployable-spaces.html">Carve Flex&trade; Deployable Spaces</a></li><li><a href="public-sculpture.html">Public Art &amp; Sculpture</a></li></ul>
+    <a class="link" href="index.html#capabilities" style="margin-top:1.5rem;display:inline-block;">Explore All Capabilities &rarr;</a>
   </div>
 </section>
 

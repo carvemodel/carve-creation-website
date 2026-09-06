@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.carvecreation.com/market-multifamily-mixed-use.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=230">
+<link rel="stylesheet" href="assets/css/styles.css?v=233">
 <link rel="icon" type="image/png" href="assets/images/Favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.carvecreation.com/"}, {"@type": "ListItem", "position": 2, "name": "Markets", "item": "https://www.carvecreation.com/markets.html"}, {"@type": "ListItem", "position": 3, "name": "Multifamily & Mixed-Use", "item": "https://www.carvecreation.com/market-multifamily-mixed-use.html"}]}</script>
 </head>
@@ -71,24 +71,89 @@
 
 <section class="section">
   <div class="container">
+    <div class="section-head"><span class="eyebrow">Related Reading</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="multifamily-insights-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:200px;">
+          <a href="insight-multifamily-shared-amenities.html" style="display:block;width:100%;height:100%;"><img src="assets/images/lifestyle-outdoor-patio.jpg" alt="Shared multifamily amenity space" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="336" height="183" loading="lazy"></a>
+        </div>
+        <a href="insight-multifamily-shared-amenities.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>Why Shared Amenities Are Becoming Part of the Residential Product</h3>
+          <p class="muted-note" style="min-height:3.2em;">Shared amenities increasingly shape residential value. Learn how multifamily and mixed-use teams can align experience, durability, operations, and phased manufacturing.</p>
+        </a>
+        <a href="insight-multifamily-shared-amenities.html" class="link" style="margin-top:auto;">Read the Insight <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="multifamily-insights-prev" aria-label="Previous articles">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="multifamily-insights-next" aria-label="Next articles">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('multifamily-insights-track');
+  var prev = document.getElementById('multifamily-insights-prev');
+  var next = document.getElementById('multifamily-insights-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
+<section class="section section-cream">
+  <div class="container">
     <div class="section-head"><span class="eyebrow">How Carve Creation Responds</span><h2></h2></div>
     <p>We translate approved concepts into coordinated standards that can be applied across buildings, amenity areas, public spaces, and development phases. Custom elements are evaluated for manufacturability, repeatability, durability, and delivery sequence.</p>
     <p style="margin-top:1.5rem;">Samples and milestone quality checks establish and protect the approved standard. Location-based identification, packaging, and project-portal tracking help project teams coordinate decisions and deliveries across complex developments.</p>
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">Selected Work</span><h2></h2></div>
+    <div class="testimonial-carousel" style="margin-top:2rem;">
+    <div class="testimonial-track" id="multifamily-work-track">
+      <div class="card">
+        <div style="position:relative;margin-bottom:18px;height:230px;">
+          <a href="project-harbor-view.html" style="display:block;width:100%;height:100%;"><img src="assets/images/lifestyle-furniture-sofa.jpg" alt="Project environment photo" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);display:block;" width="603" height="344" loading="lazy"></a>
+          <div style="position:absolute;left:12px;bottom:12px;display:flex;gap:6px;flex-wrap:wrap;z-index:2;">
+            <a href="case-studies.html?capability=contract-furniture" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Contract Furniture</a>
+            <a href="case-studies.html?market=multifamily-mixed-use" style="background:rgba(20,20,15,.6);backdrop-filter:blur(3px);color:#fff;text-decoration:none;padding:5px 11px;border-radius:999px;font-size:.7rem;font-weight:600;white-space:nowrap;">Multifamily &amp; Mixed-Use</a>
+          </div>
+        </div>
+        <a href="project-harbor-view.html" style="display:block;color:inherit;text-decoration:none;">
+          <h3>Harbor View Residences</h3>
+          <p class="muted-note">Seattle, WA &middot; 2024</p>
+          <p class="muted-note" style="min-height:3.2em;">Amenity furniture &amp; wayfinding package</p>
+        </a>
+        <a href="project-harbor-view.html" class="link" style="margin-top:auto;">View Selected Work <span class="link-arrow">&rarr;</span></a>
+      </div>
+    </div>
+    <button type="button" class="testimonial-nav-btn prev" id="multifamily-work-prev" aria-label="Previous projects">&#8592;</button>
+    <button type="button" class="testimonial-nav-btn next" id="multifamily-work-next" aria-label="Next projects">&#8594;</button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var track = document.getElementById('multifamily-work-track');
+  var prev = document.getElementById('multifamily-work-prev');
+  var next = document.getElementById('multifamily-work-next');
+  if (!track || !prev || !next) return;
+  function step(){ return (track.querySelector('.card') || {}).offsetWidth + 28 || 388; }
+  prev.addEventListener('click', function(){ track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function(){ track.scrollBy({ left: step(), behavior: 'smooth' }); });
+})();
+</script>
+
 <section class="section section-cream">
   <div class="container">
     <div class="section-head"><span class="eyebrow">Five Capabilities, One Project Standard</span><h2></h2></div>
     <p>All Carve Creation capabilities can support multifamily and mixed-use developments:</p>
-    <div class="grid grid-3" style="margin-top:2rem;">
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-hotel.jpg" alt="Loose furniture in a finished interior" width="1920" height="1080" loading="lazy"></div><h3 class="fit-line">Contract Furniture Packages</h3><p>Custom casegoods, seating, tables, banquettes, counters, and coordinated furniture families manufactured for hospitality and commercial projects.</p><a class="link" href="contract-furniture.html">Explore Contract Furniture &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-wayfinding.jpg" alt="Branded wayfinding signage in an interior environment" width="750" height="410" loading="lazy"></div><h3 class="fit-line">Branding &amp; Wayfinding Packages</h3><p>Building identification, dimensional logos, directories, directional signage, and branded features developed as coordinated visual systems.</p><a class="link" href="branding-wayfinding.html">Explore Branding &amp; Wayfinding &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/pod-hero.jpg" alt="Modular shelving and adaptable storage components" width="2364" height="1330" loading="lazy"></div><h3 class="fit-line">Carve Flex&trade;<br>Deployable Spaces</h3><p>Finished, transportable environments combining furniture, signage, architectural lighting, structural components, and MEP systems in one coordinated package.</p><a class="link" href="deployable-spaces.html">Explore Deployable Spaces &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-lighting.jpg" alt="Architectural pendant lighting in a finished interior" width="750" height="544" loading="lazy"></div><h3 class="fit-line">Architectural Lighting Packages</h3><p>Decorative and architectural fixtures coordinated around the approved design, finishes, mounting conditions, electrical requirements, and project schedule.</p><a class="link" href="architectural-lighting.html">Explore Architectural Lighting &rarr;</a></div>
-      <div class="card"><div class="card-thumb"><img src="assets/images/hero-public-art.webp" alt="Public art installation in an outdoor environment" width="2884" height="1649" loading="lazy"></div><h3 class="fit-line">Public Art &amp; Sculpture</h3><p>Site-specific sculpture, architectural ornament, and artist-designed installations fabricated for civic, commercial, hospitality, and institutional environments.</p><a class="link" href="public-sculpture.html">Explore Public Art &amp; Sculpture &rarr;</a></div>
-    </div>
-    <p class="muted-note" style="margin-top:1.5rem;">Related insight: <a href="insight-multifamily-shared-amenities.html">Why Shared Amenities Are Part of the Residential Product</a></p>
+    <ul class="plain-list" style="margin-top:1.5rem;"><li><a href="contract-furniture.html">Contract Furniture</a></li><li><a href="branding-wayfinding.html">Branding &amp; Wayfinding</a></li><li><a href="architectural-lighting.html">Architectural Lighting</a></li><li><a href="deployable-spaces.html">Carve Flex&trade; Deployable Spaces</a></li><li><a href="public-sculpture.html">Public Art &amp; Sculpture</a></li></ul>
+    <a class="link" href="index.html#capabilities" style="margin-top:1.5rem;display:inline-block;">Explore All Capabilities &rarr;</a>
   </div>
 </section>
 
