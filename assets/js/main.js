@@ -154,4 +154,46 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   }
+
+  // Auto-fit oversized card headings and CTA link labels onto a single
+  // line. The CSS clamp() alone isn't enough for long names (e.g.
+  // "Healthcare, Education & Civic") at narrower card widths, so this
+  // measures actual overflow and shrinks font-size in small steps until
+  // the full text fits, without falling back to ellipsis truncation
+  // unless a sane minimum size is reached.
+  function fitLineText() {
+    var els = document.querySelectorAll('.card h3.fit-line, .card .link.fit-line .link-label');
+    var minSize = 11; // px floor before allowing ellipsis truncation
+    els.forEach(function (el) {
+      if (!el.dataset.fitBase) {
+        el.dataset.fitBase = window.getComputedStyle(el).fontSize;
+      }
+      el.style.fontSize = el.dataset.fitBase;
+      // On narrow viewports headings intentionally wrap to multiple lines
+      // at a fixed size instead of shrinking (see mobile CSS override);
+      // skip those so we don't fight that layout.
+      if (window.getComputedStyle(el).whiteSpace !== 'nowrap') return;
+      var guard = 0;
+      while (el.scrollWidth > el.clientWidth + 1 && guard < 60) {
+        var current = parseFloat(window.getComputedStyle(el).fontSize);
+        var next = current - 0.5;
+        if (next < minSize) break;
+        el.style.fontSize = next + 'px';
+        guard++;
+      }
+    });
+  }
+
+  if (document.querySelector('.fit-line')) {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fitLineText);
+    }
+    window.addEventListener('load', fitLineText);
+    var fitLineResizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(fitLineResizeTimer);
+      fitLineResizeTimer = setTimeout(fitLineText, 150);
+    });
+    fitLineText();
+  }
 });
