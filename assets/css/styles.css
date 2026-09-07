@@ -838,6 +838,20 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
+/* Plain numeral variant: a large standalone digit used as a graphic
+   mark instead of a circular badge. */
+.stepper.stepper-plain .step { grid-template-columns: 72px 1fr; align-items: center; }
+.stepper.stepper-plain .num {
+  width: auto; height: auto;
+  background: none;
+  border-radius: 0;
+  color: var(--accent);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+
 /* ---------- Accordion (FAQ) ---------- */
 .accordion-group { margin-bottom: 3rem; }
 .accordion-group:last-child { margin-bottom: 0; }
@@ -1383,6 +1397,8 @@ a.scope-badge:hover {
   .section { padding: 64px 0; }
   .step { grid-template-columns: 44px 1fr; gap: 16px; }
   .step .num { width: 44px; height: 44px; font-size: var(--fs-md); }
+  .stepper.stepper-plain .step { grid-template-columns: 48px 1fr; }
+  .stepper.stepper-plain .num { width: auto; height: auto; font-size: 2.1rem; }
   .hero-inner h1, .hero-inner h2 { font-size: var(--fs-hero-h1-mobile); }
   .check-list li > div { white-space: normal; font-size: 1rem; }
   .nowrap-heading { white-space: normal; }
