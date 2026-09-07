@@ -622,6 +622,9 @@ img { max-width: 100%; display: block; }
 .card .link:hover { color: var(--accent); }
 .link-arrow { display: inline-flex; align-items: center; line-height: var(--lh-none); transition: transform .15s ease; }
 .card .link:hover .link-arrow { transform: translateX(3px); }
+.card .link.fit-line { max-width: 100%; font-size: var(--fs-sm); }
+.card .link.fit-line .link-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.card .link.fit-line .link-arrow { flex: none; }
 
 .card-dark {
   background: #232320;
