@@ -1183,6 +1183,20 @@ a.scope-badge:hover {
 .stat-num { font-size: 2.4rem; font-weight: 800; color: var(--ink); line-height: var(--lh-none); margin-bottom: .5rem; }
 .stat-num.stat-num-text { font-size: var(--fs-md); line-height: var(--lh-snug); }
 
+/* ---------- Proof Band (homepage stat strip) ---------- */
+.proof-band { display: flex; align-items: stretch; }
+.proof-item { flex: 1 1 0; min-width: 0; padding: 0 28px; text-align: center; border-left: 1px solid var(--line); }
+.proof-item:first-child { border-left: none; }
+.proof-num { font-size: 2.6rem; font-weight: 800; color: var(--ink); line-height: var(--lh-none); margin-bottom: .5rem; }
+.proof-num.proof-num-text { font-size: 1.5rem; line-height: var(--lh-snug); }
+.proof-label { font-size: var(--fs-sm); color: var(--muted); line-height: var(--lh-normal); max-width: 240px; margin: 0 auto; }
+@media (max-width: 768px) {
+  .proof-band { flex-wrap: wrap; }
+  .proof-item { flex: 0 0 50%; border-left: none; border-top: 1px solid var(--line); padding: 24px 16px; }
+  .proof-item:nth-child(odd) { border-right: 1px solid var(--line); }
+  .proof-item:nth-child(-n+2) { border-top: none; }
+}
+
 /* ---------- Market Notes (title + description, no bullets) ---------- */
 .market-note { padding: 22px 0; border-top: 1px solid var(--line); }
 .market-note:first-child { border-top: none; padding-top: 0; }
