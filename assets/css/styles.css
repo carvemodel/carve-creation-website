@@ -1185,9 +1185,9 @@ a.scope-badge:hover {
 
 /* ---------- Proof Band (homepage stat strip) ---------- */
 .proof-band { display: flex; align-items: stretch; }
-.proof-item { flex: 1 1 0; min-width: 0; padding: 0 28px; text-align: center; border-left: 1px solid var(--line); }
+.proof-item { flex: 1 1 0; min-width: 0; padding: 0 28px; text-align: center; border-left: 1px solid var(--line); display: flex; flex-direction: column; align-items: center; }
 .proof-item:first-child { border-left: none; }
-.proof-num { font-size: 2.6rem; font-weight: 800; color: var(--ink); line-height: var(--lh-none); margin-bottom: .5rem; }
+.proof-num { width: 100%; min-height: 2.6rem; display: flex; align-items: flex-end; justify-content: center; font-size: 2.6rem; font-weight: 800; color: var(--ink); line-height: var(--lh-none); margin-bottom: .5rem; }
 .proof-num.proof-num-text { font-size: 1.5rem; line-height: var(--lh-snug); }
 .proof-label { font-size: var(--fs-sm); color: var(--muted); line-height: var(--lh-normal); max-width: 240px; margin: 0 auto; }
 @media (max-width: 768px) {
