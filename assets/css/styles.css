@@ -1083,7 +1083,8 @@ a.scope-badge:hover {
   scrollbar-width: none;
 }
 .testimonial-track::-webkit-scrollbar { display: none; }
-.cs-work-track .card { flex: 0 0 360px; min-height: 560px; }
+.testimonial-track { align-items: stretch; }
+.cs-work-track .card { flex: 0 0 360px; min-height: 560px; height: auto; }
 @media (max-width: 640px) {
   .cs-work-track .card { flex-basis: 280px; min-height: 640px; }
 }
