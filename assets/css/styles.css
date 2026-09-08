@@ -1087,6 +1087,13 @@ a.scope-badge:hover {
 @media (max-width: 640px) {
   .cs-work-track .card { flex-basis: 280px; min-height: 640px; }
 }
+.cs-card { min-height: 760px; }
+@media (max-width: 960px) {
+  .cs-card { min-height: 780px; }
+}
+@media (max-width: 640px) {
+  .cs-card { min-height: 720px; }
+}
 .testimonial-card {
   flex: 0 0 300px; scroll-snap-align: start;
   background: var(--white); border: 1px solid transparent;
