@@ -1083,9 +1083,9 @@ a.scope-badge:hover {
   scrollbar-width: none;
 }
 .testimonial-track::-webkit-scrollbar { display: none; }
-.cs-work-track .card { flex: 0 0 360px; }
+.cs-work-track .card { flex: 0 0 360px; min-height: 930px; }
 @media (max-width: 640px) {
-  .cs-work-track .card { flex-basis: 280px; }
+  .cs-work-track .card { flex-basis: 280px; min-height: 1050px; }
 }
 .testimonial-card {
   flex: 0 0 300px; scroll-snap-align: start;
