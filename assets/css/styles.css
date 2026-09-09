@@ -1408,6 +1408,33 @@ a.scope-badge:hover {
   .hero-inner p.lede { white-space: normal; }
 }
 
+/* Between true mobile and the full nav pill's minimum comfortable width,
+   keep the most-used destinations (Capabilities, Markets, Selected Works,
+   Contact) visible instead of hiding all primary navigation behind the
+   hamburger. The hamburger still opens the complete menu (including
+   Company) for anything not covered here. */
+.quick-nav { display: none; }
+@media (min-width: 901px) and (max-width: 1400px) {
+  .quick-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    grid-column: 2;
+    background: var(--white);
+    padding: 14px 30px;
+    border-radius: 0 0 24px 24px;
+  }
+  .quick-nav > a, .quick-nav .nav-dropdown-toggle {
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .quick-nav > a:hover, .quick-nav .nav-dropdown-toggle:hover { color: var(--ink); }
+  .header-actions { right: 28px; }
+}
+
 @media (max-width: 720px) {
   :root { --frame: 12px; }
   .hero-frame { border-radius: 20px; }

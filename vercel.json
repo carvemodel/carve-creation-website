@@ -1,41 +1,460 @@
 {
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/carve-flex.html", "destination": "/deployable-spaces.html", "permanent": true },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/accessibility",
+      "destination": "/accessibility.html",
+      "permanent": true
+    },
+    {
+      "source": "/architectural-lighting",
+      "destination": "/architectural-lighting.html",
+      "permanent": true
+    },
+    {
+      "source": "/branding-wayfinding",
+      "destination": "/branding-wayfinding.html",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/case-studies.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contract-furniture",
+      "destination": "/contract-furniture.html",
+      "permanent": true
+    },
+    {
+      "source": "/custom-project-review",
+      "destination": "/custom-project-review.html",
+      "permanent": true
+    },
+    {
+      "source": "/deployable-spaces",
+      "destination": "/deployable-spaces.html",
+      "permanent": true
+    },
+    {
+      "source": "/design-system",
+      "destination": "/design-system.html",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/faq.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-we-work",
+      "destination": "/how-we-work.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-coordinated-hospitality-manufacturing",
+      "destination": "/insight-coordinated-hospitality-manufacturing.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-hospitality-led-workplace",
+      "destination": "/insight-hospitality-led-workplace.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-multi-location-brand-standards",
+      "destination": "/insight-multi-location-brand-standards.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-multifamily-shared-amenities",
+      "destination": "/insight-multifamily-shared-amenities.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-public-environments-clarity-durability",
+      "destination": "/insight-public-environments-clarity-durability.html",
+      "permanent": true
+    },
+    {
+      "source": "/insight-reusable-brand-activations",
+      "destination": "/insight-reusable-brand-activations.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-events-brand-activations",
+      "destination": "/market-events-brand-activations.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-healthcare-education",
+      "destination": "/market-healthcare-education.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-hospitality",
+      "destination": "/market-hospitality.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-multifamily-mixed-use",
+      "destination": "/market-multifamily-mixed-use.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-retail-food-beverage",
+      "destination": "/market-retail-food-beverage.html",
+      "permanent": true
+    },
+    {
+      "source": "/market-workplace",
+      "destination": "/market-workplace.html",
+      "permanent": true
+    },
+    {
+      "source": "/markets",
+      "destination": "/markets.html",
+      "permanent": true
+    },
+    {
+      "source": "/news-aia26-san-diego",
+      "destination": "/news-aia26-san-diego.html",
+      "permanent": true
+    },
+    {
+      "source": "/news-insights",
+      "destination": "/news-insights.html",
+      "permanent": true
+    },
+    {
+      "source": "/news-project-portal-partner-testing",
+      "destination": "/news-project-portal-partner-testing.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-clients",
+      "destination": "/portal-clients.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-finance",
+      "destination": "/portal-finance.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-forgot-password",
+      "destination": "/portal-forgot-password.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-leads",
+      "destination": "/portal-leads.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-login",
+      "destination": "/portal-login.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-overview",
+      "destination": "/portal-overview.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-project-detail",
+      "destination": "/portal-project-detail.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-projects",
+      "destination": "/portal-projects.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-quotes",
+      "destination": "/portal-quotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-reset-password",
+      "destination": "/portal-reset-password.html",
+      "permanent": true
+    },
+    {
+      "source": "/portal-team-access",
+      "destination": "/portal-team-access.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-anchor-point-lobby-installation",
+      "destination": "/project-anchor-point-lobby-installation.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-brightwater-leasing-gallery",
+      "destination": "/project-brightwater-leasing-gallery.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-cascade-hotel-lighting",
+      "destination": "/project-cascade-hotel-lighting.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-cedar-grove-community-library",
+      "destination": "/project-cedar-grove-community-library.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-ferncroft-campus-lighting",
+      "destination": "/project-ferncroft-campus-lighting.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-harbor-view",
+      "destination": "/project-harbor-view.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-meadowcrest-courtyard-sculpture",
+      "destination": "/project-meadowcrest-courtyard-sculpture.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-meridian-coffee-rollout",
+      "destination": "/project-meridian-coffee-rollout.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-northfield-corporate-meeting-suite",
+      "destination": "/project-northfield-corporate-meeting-suite.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-northgate-campus",
+      "destination": "/project-northgate-campus.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-riverside-hotel",
+      "destination": "/project-riverside-hotel.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-solstice-pop-up-activation",
+      "destination": "/project-solstice-pop-up-activation.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-tidewater-plaza-sculpture",
+      "destination": "/project-tidewater-plaza-sculpture.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-union-market-hall-lighting",
+      "destination": "/project-union-market-hall-lighting.html",
+      "permanent": true
+    },
+    {
+      "source": "/public-sculpture",
+      "destination": "/public-sculpture.html",
+      "permanent": true
+    },
+    {
+      "source": "/submit-a-project",
+      "destination": "/submit-a-project.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you.html",
+      "permanent": true
+    },
+    {
+      "source": "/carve-flex.html",
+      "destination": "/deployable-spaces.html",
+      "permanent": true
+    },
     {
       "source": "/:path*",
-      "has": [{ "type": "host", "value": "carvecreation.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "carvecreation.com"
+        }
+      ],
       "destination": "https://www.carvecreation.com/:path*",
       "permanent": true
     },
-    { "source": "/scale-model-services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
-    { "source": "/architectural-scale-models", "destination": "https://www.physical-model.com/architectural-scale-models", "permanent": true },
-    { "source": "/scale-model-services/product", "destination": "https://www.physical-model.com/scale-model-services/product", "permanent": true },
-    { "source": "/scale-model-services/film", "destination": "https://www.physical-model.com/scale-model-services/film", "permanent": true },
-    { "source": "/scale-model-services/art", "destination": "https://www.physical-model.com/scale-model-services/art", "permanent": true },
-    { "source": "/model-making-process", "destination": "https://www.physical-model.com/model-making-process", "permanent": true },
-    { "source": "/blog", "destination": "https://www.physical-model.com/blog", "permanent": true },
-    { "source": "/blog/architectural-model-packaging-shipping-installation", "destination": "https://www.physical-model.com/blog/architectural-model-packaging-shipping-installation", "permanent": true },
-    { "source": "/blog/architectural-scale-model-cost-us", "destination": "https://www.physical-model.com/blog/architectural-scale-model-cost-us", "permanent": true },
-    { "source": "/blog/atlanta-mixed-use-architectural-model-installation", "destination": "https://www.physical-model.com/blog/atlanta-mixed-use-architectural-model-installation", "permanent": true },
-    { "source": "/blog/carve-model-aia26-conference", "destination": "https://www.physical-model.com/blog/carve-model-aia26-conference", "permanent": true },
-    { "source": "/blog/carve-studio-portal-partner-testing", "destination": "https://www.physical-model.com/blog/carve-studio-portal-partner-testing", "permanent": true },
-    { "source": "/blog/from-ai-generated-image-to-physical-model", "destination": "https://www.physical-model.com/blog/from-ai-generated-image-to-physical-model", "permanent": true },
-    { "source": "/blog/how-long-to-build-architectural-model", "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model", "permanent": true },
-    { "source": "/blog/how-to-choose-architectural-model-scale", "destination": "https://www.physical-model.com/blog/how-to-choose-architectural-model-scale", "permanent": true },
-    { "source": "/blog/how-to-prepare-an-architectural-model-brief", "destination": "https://www.physical-model.com/blog/how-to-prepare-an-architectural-model-brief", "permanent": true },
-    { "source": "/blog/new-carve-model-website-launch", "destination": "https://www.physical-model.com/blog/new-carve-model-website-launch", "permanent": true },
-    { "source": "/blog/physical-models-vs-renderings-animation-ar-vr", "destination": "https://www.physical-model.com/blog/physical-models-vs-renderings-animation-ar-vr", "permanent": true },
-    { "source": "/blog/types-of-architectural-scale-models", "destination": "https://www.physical-model.com/blog/types-of-architectural-scale-models", "permanent": true },
-    { "source": "/blog/why-physical-verification-matters-in-digital-design", "destination": "https://www.physical-model.com/blog/why-physical-verification-matters-in-digital-design", "permanent": true },
-    { "source": "/about-carve-model", "destination": "https://www.physical-model.com/about-carve-model", "permanent": true },
-    { "source": "/works", "destination": "https://www.physical-model.com/works", "permanent": true },
-    { "source": "/architectural-scale-model-services-carve-model", "destination": "https://www.physical-model.com/architectural-scale-models", "permanent": true },
-    { "source": "/model-services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
-    { "source": "/services", "destination": "https://www.physical-model.com/scale-model-services", "permanent": true },
-    { "source": "/product-prototype", "destination": "https://www.physical-model.com/scale-model-services/product", "permanent": true },
-    { "source": "/film-previsualization", "destination": "https://www.physical-model.com/scale-model-services/film", "permanent": true },
-    { "source": "/portfolio-scale-models", "destination": "https://www.physical-model.com/works", "permanent": true },
-    { "source": "/blog/architectural-scale-model-production-timeline", "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model", "permanent": true }
+    {
+      "source": "/scale-model-services",
+      "destination": "https://www.physical-model.com/scale-model-services",
+      "permanent": true
+    },
+    {
+      "source": "/architectural-scale-models",
+      "destination": "https://www.physical-model.com/architectural-scale-models",
+      "permanent": true
+    },
+    {
+      "source": "/scale-model-services/product",
+      "destination": "https://www.physical-model.com/scale-model-services/product",
+      "permanent": true
+    },
+    {
+      "source": "/scale-model-services/film",
+      "destination": "https://www.physical-model.com/scale-model-services/film",
+      "permanent": true
+    },
+    {
+      "source": "/scale-model-services/art",
+      "destination": "https://www.physical-model.com/scale-model-services/art",
+      "permanent": true
+    },
+    {
+      "source": "/model-making-process",
+      "destination": "https://www.physical-model.com/model-making-process",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "https://www.physical-model.com/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/architectural-model-packaging-shipping-installation",
+      "destination": "https://www.physical-model.com/blog/architectural-model-packaging-shipping-installation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/architectural-scale-model-cost-us",
+      "destination": "https://www.physical-model.com/blog/architectural-scale-model-cost-us",
+      "permanent": true
+    },
+    {
+      "source": "/blog/atlanta-mixed-use-architectural-model-installation",
+      "destination": "https://www.physical-model.com/blog/atlanta-mixed-use-architectural-model-installation",
+      "permanent": true
+    },
+    {
+      "source": "/blog/carve-model-aia26-conference",
+      "destination": "https://www.physical-model.com/blog/carve-model-aia26-conference",
+      "permanent": true
+    },
+    {
+      "source": "/blog/carve-studio-portal-partner-testing",
+      "destination": "https://www.physical-model.com/blog/carve-studio-portal-partner-testing",
+      "permanent": true
+    },
+    {
+      "source": "/blog/from-ai-generated-image-to-physical-model",
+      "destination": "https://www.physical-model.com/blog/from-ai-generated-image-to-physical-model",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-long-to-build-architectural-model",
+      "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-choose-architectural-model-scale",
+      "destination": "https://www.physical-model.com/blog/how-to-choose-architectural-model-scale",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-prepare-an-architectural-model-brief",
+      "destination": "https://www.physical-model.com/blog/how-to-prepare-an-architectural-model-brief",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-carve-model-website-launch",
+      "destination": "https://www.physical-model.com/blog/new-carve-model-website-launch",
+      "permanent": true
+    },
+    {
+      "source": "/blog/physical-models-vs-renderings-animation-ar-vr",
+      "destination": "https://www.physical-model.com/blog/physical-models-vs-renderings-animation-ar-vr",
+      "permanent": true
+    },
+    {
+      "source": "/blog/types-of-architectural-scale-models",
+      "destination": "https://www.physical-model.com/blog/types-of-architectural-scale-models",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-physical-verification-matters-in-digital-design",
+      "destination": "https://www.physical-model.com/blog/why-physical-verification-matters-in-digital-design",
+      "permanent": true
+    },
+    {
+      "source": "/about-carve-model",
+      "destination": "https://www.physical-model.com/about-carve-model",
+      "permanent": true
+    },
+    {
+      "source": "/works",
+      "destination": "https://www.physical-model.com/works",
+      "permanent": true
+    },
+    {
+      "source": "/architectural-scale-model-services-carve-model",
+      "destination": "https://www.physical-model.com/architectural-scale-models",
+      "permanent": true
+    },
+    {
+      "source": "/model-services",
+      "destination": "https://www.physical-model.com/scale-model-services",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "https://www.physical-model.com/scale-model-services",
+      "permanent": true
+    },
+    {
+      "source": "/product-prototype",
+      "destination": "https://www.physical-model.com/scale-model-services/product",
+      "permanent": true
+    },
+    {
+      "source": "/film-previsualization",
+      "destination": "https://www.physical-model.com/scale-model-services/film",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-scale-models",
+      "destination": "https://www.physical-model.com/works",
+      "permanent": true
+    },
+    {
+      "source": "/blog/architectural-scale-model-production-timeline",
+      "destination": "https://www.physical-model.com/blog/how-long-to-build-architectural-model",
+      "permanent": true
+    }
   ]
 }
