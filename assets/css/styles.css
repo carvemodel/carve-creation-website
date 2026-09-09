@@ -1388,10 +1388,10 @@ a.scope-badge:hover {
     justify-content: center;
     margin-top: 16px;
   }
-  .nav-dropdown { width: 100%; }
-  .nav-dropdown-toggle { pointer-events: none; opacity: .75; }
-  .nav-dropdown-toggle::after { display: none; }
-  .nav-dropdown-menu {
+  .main-nav .nav-dropdown { width: 100%; }
+  .main-nav .nav-dropdown-toggle { pointer-events: none; opacity: .75; }
+  .main-nav .nav-dropdown-toggle::after { display: none; }
+  .main-nav .nav-dropdown-menu {
     position: static;
     opacity: 1;
     visibility: visible;
@@ -1402,8 +1402,8 @@ a.scope-badge:hover {
     min-width: 0;
     gap: 0;
   }
-  .nav-dropdown-menu a { color: var(--muted-2); width: 100%; padding: 11px 0; border-bottom: 1px solid var(--line-dark); }
-  .nav-dropdown-menu a:hover, .nav-dropdown-menu a.active { background: none; color: var(--white); }
+  .main-nav .nav-dropdown-menu a { color: var(--muted-2); width: 100%; padding: 11px 0; border-bottom: 1px solid var(--line-dark); }
+  .main-nav .nav-dropdown-menu a:hover, .main-nav .nav-dropdown-menu a.active { background: none; color: var(--white); }
   .hero-inner h1, .hero-inner h2 { white-space: normal; }
   .hero-inner p.lede { white-space: normal; }
 }

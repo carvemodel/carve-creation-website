@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=292">
+<link rel="stylesheet" href="assets/css/styles.css?v=296">
 <link rel="icon" type="image/png" href="assets/images/Favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact Carve Creation", "description": "Contact Carve Creation about a contract furniture, branding and wayfinding, architectural lighting, Carve Flex\u2122, or custom built-environment manufacturing project.", "url": "https://www.carvecreation.com/contact.html", "about": {"@id": "https://www.carvecreation.com/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.carvecreation.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.carvecreation.com/contact.html"}]}</script>
@@ -71,21 +71,21 @@
       </div>
 
       <div>
-        <form id="contact-form">
+        <form id="contact-form" method="POST" action="/api/contact">
           <h3 class="form-section-title">Contact Information</h3>
           <div class="form-grid">
-            <div class="field"><label>Name* </label><input type="text" name="name" placeholder="" required></div>
-            <div class="field"><label>Company / Organization* </label><input type="text" name="company" placeholder="" required></div>
-            <div class="field"><label>Email* </label><input type="email" name="email" placeholder="" required></div>
-            <div class="field"><label>Phone Number <span class="hint">Optional</span></label><input type="tel" name="phone" placeholder=""></div>
+            <div class="field"><label for="cf-name">Name* </label><input type="text" id="cf-name" name="name" placeholder="" required></div>
+            <div class="field"><label for="cf-company">Company / Organization* </label><input type="text" id="cf-company" name="company" placeholder="" required></div>
+            <div class="field"><label for="cf-email">Email* </label><input type="email" id="cf-email" name="email" placeholder="" required></div>
+            <div class="field"><label for="cf-phone">Phone Number <span class="hint">Optional</span></label><input type="tel" id="cf-phone" name="phone" placeholder=""></div>
           </div>
 
           <h3 class="form-section-title">Project Information</h3>
           <div class="form-grid">
-            <div class="field"><label>Project Name <span class="hint">Optional</span></label><input type="text" name="project_name" placeholder=""></div>
-            <div class="field"><label>Project Location* <span class="hint">City, state/province, and country</span></label><input type="text" name="project_location" placeholder="" required></div>
-            <div class="field"><label>Your Role <span class="hint">Optional</span></label><select name="role"><option value="">Select&hellip;</option><option>Owner or Developer</option><option>Architect or Interior Designer</option><option>General Contractor</option><option>Purchasing or Procurement</option><option>Project Manager</option><option>Brand or Operator</option><option>Other</option></select></div>
-            <div class="field"><label>Market <span class="hint">Optional</span></label><select name="market"><option value="">Select&hellip;</option><option>Hospitality</option><option>Workplace</option><option>Multifamily &amp; Mixed-Use</option><option>Retail, Food &amp; Beverage</option><option>Events &amp; Brand Activations</option><option>Healthcare, Education &amp; Civic</option><option>Other Commercial</option></select></div>
+            <div class="field"><label for="cf-project-name">Project Name <span class="hint">Optional</span></label><input type="text" id="cf-project-name" name="project_name" placeholder=""></div>
+            <div class="field"><label for="cf-project-location">Project Location* <span class="hint">City, state/province, and country</span></label><input type="text" id="cf-project-location" name="project_location" placeholder="" required></div>
+            <div class="field"><label for="cf-role">Your Role <span class="hint">Optional</span></label><select id="cf-role" name="role"><option value="">Select&hellip;</option><option>Owner or Developer</option><option>Architect or Interior Designer</option><option>General Contractor</option><option>Purchasing or Procurement</option><option>Project Manager</option><option>Brand or Operator</option><option>Other</option></select></div>
+            <div class="field"><label for="cf-market">Market <span class="hint">Optional</span></label><select id="cf-market" name="market"><option value="">Select&hellip;</option><option>Hospitality</option><option>Workplace</option><option>Multifamily &amp; Mixed-Use</option><option>Retail, Food &amp; Beverage</option><option>Events &amp; Brand Activations</option><option>Healthcare, Education &amp; Civic</option><option>Other Commercial</option></select></div>
 
             <div class="field full">
               <label>What Do You Need? <span class="hint">Select all that apply.</span></label>
@@ -100,10 +100,10 @@
               </div>
             </div>
 
-            <div class="field"><label>Project Stage* </label><select name="project_stage" required><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
-            <div class="field"><label>Estimated Budget for This Package <span class="hint">Optional</span></label><select name="budget"><option value="">Select&hellip;</option><option>Under $25,000</option><option>$25,000&ndash;$100,000</option><option>$100,000&ndash;$500,000</option><option>Over $500,000</option><option>Not Yet Established</option></select></div>
-            <div class="field"><label>Target Delivery Timing </label><select name="delivery_timing"><option value="">Select&hellip;</option><option>Within 3 Months</option><option>3&ndash;6 Months</option><option>6&ndash;12 Months</option><option>More Than 12 Months</option><option>Not Yet Determined</option></select></div>
-            <div class="field full"><label>Project Description <span class="hint">Optional</span></label><textarea name="project_details" placeholder="Briefly describe what you are looking to manufacture or deploy. Include approximate quantities, project stage, desired materials or finishes, and any important schedule or site requirements currently known. It is okay if some information has not yet been determined."></textarea></div>
+            <div class="field"><label for="cf-project-stage">Project Stage* </label><select id="cf-project-stage" name="project_stage" required><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
+            <div class="field"><label for="cf-budget">Estimated Budget for This Package <span class="hint">Optional</span></label><select id="cf-budget" name="budget"><option value="">Select&hellip;</option><option>Under $25,000</option><option>$25,000&ndash;$100,000</option><option>$100,000&ndash;$500,000</option><option>Over $500,000</option><option>Not Yet Established</option></select></div>
+            <div class="field"><label for="cf-delivery-timing">Target Delivery Timing </label><select id="cf-delivery-timing" name="delivery_timing"><option value="">Select&hellip;</option><option>Within 3 Months</option><option>3&ndash;6 Months</option><option>6&ndash;12 Months</option><option>More Than 12 Months</option><option>Not Yet Determined</option></select></div>
+            <div class="field full"><label for="cf-project-details">Project Description <span class="hint">Optional</span></label><textarea id="cf-project-details" name="project_details" placeholder="Briefly describe what you are looking to manufacture or deploy. Include approximate quantities, project stage, desired materials or finishes, and any important schedule or site requirements currently known. It is okay if some information has not yet been determined."></textarea></div>
           </div>
 
           <h3 class="form-section-title">Project Files</h3>
@@ -115,7 +115,7 @@
           </div>
 
           <div class="form-grid">
-            <div class="field full"><label>File-Sharing Link <span class="hint">Optional &mdash; Dropbox, Google Drive, OneDrive, or WeTransfer</span></label><input type="url" name="file_link" placeholder="https://"></div>
+            <div class="field full"><label for="cf-file-link">File-Sharing Link <span class="hint">Optional &mdash; Dropbox, Google Drive, OneDrive, or WeTransfer</span></label><input type="url" id="cf-file-link" name="file_link" placeholder="https://"></div>
           </div>
 
           <p id="contact-form-error" class="muted-note" style="display:none;color:#b3261e;margin-top:1rem;"></p>
