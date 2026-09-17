@@ -1092,12 +1092,12 @@ a.scope-badge:hover {
 @media (max-width: 640px) {
   #sculpture-work-track .card { min-height: 560px; }
 }
-.cs-card { min-height: 760px; }
+.cs-card { min-height: 580px; }
 @media (max-width: 960px) {
-  .cs-card { min-height: 780px; }
+  .cs-card { min-height: 600px; }
 }
 @media (max-width: 640px) {
-  .cs-card { min-height: 720px; }
+  .cs-card { min-height: 620px; }
 }
 .testimonial-card {
   flex: 0 0 300px; scroll-snap-align: start;
