@@ -226,6 +226,11 @@
       "permanent": true
     },
     {
+      "source": "/project-din-tai-fung",
+      "destination": "/project-din-tai-fung.html",
+      "permanent": true
+    },
+    {
       "source": "/project-ferncroft-campus-lighting",
       "destination": "/project-ferncroft-campus-lighting.html",
       "permanent": true
@@ -247,7 +252,7 @@
     },
     {
       "source": "/project-meridian-coffee-rollout",
-      "destination": "/project-meridian-coffee-rollout.html",
+      "destination": "/project-din-tai-fung.html",
       "permanent": true
     },
     {
@@ -263,6 +268,11 @@
     {
       "source": "/project-private-estate",
       "destination": "/project-private-estate.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-regus-san-francisco",
+      "destination": "/project-regus-san-francisco.html",
       "permanent": true
     },
     {
