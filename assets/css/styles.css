@@ -1088,6 +1088,10 @@ a.scope-badge:hover {
 @media (max-width: 640px) {
   .cs-work-track .card { flex-basis: 280px; min-height: 640px; }
 }
+#sculpture-work-track .card { min-height: 500px; }
+@media (max-width: 640px) {
+  #sculpture-work-track .card { min-height: 560px; }
+}
 .cs-card { min-height: 760px; }
 @media (max-width: 960px) {
   .cs-card { min-height: 780px; }
