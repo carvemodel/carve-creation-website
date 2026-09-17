@@ -261,6 +261,11 @@
       "permanent": true
     },
     {
+      "source": "/project-loop-iowa-city-pedestrian-mall",
+      "destination": "/project-loop-iowa-city-pedestrian-mall.html",
+      "permanent": true
+    },
+    {
       "source": "/project-meadowcrest-courtyard-sculpture",
       "destination": "/project-meadowcrest-courtyard-sculpture.html",
       "permanent": true
