@@ -261,6 +261,11 @@
       "permanent": true
     },
     {
+      "source": "/project-private-estate",
+      "destination": "/project-private-estate.html",
+      "permanent": true
+    },
+    {
       "source": "/project-riverside-hotel",
       "destination": "/project-h-hotel-los-angeles.html",
       "permanent": true
@@ -283,6 +288,11 @@
     {
       "source": "/project-union-market-hall-lighting",
       "destination": "/project-union-market-hall-lighting.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-virgin-hotels-las-vegas",
+      "destination": "/project-virgin-hotels-las-vegas.html",
       "permanent": true
     },
     {
