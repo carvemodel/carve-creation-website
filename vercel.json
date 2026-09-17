@@ -236,6 +236,11 @@
       "permanent": true
     },
     {
+      "source": "/project-h-hotel-los-angeles",
+      "destination": "/project-h-hotel-los-angeles.html",
+      "permanent": true
+    },
+    {
       "source": "/project-meadowcrest-courtyard-sculpture",
       "destination": "/project-meadowcrest-courtyard-sculpture.html",
       "permanent": true
@@ -257,7 +262,12 @@
     },
     {
       "source": "/project-riverside-hotel",
-      "destination": "/project-riverside-hotel.html",
+      "destination": "/project-h-hotel-los-angeles.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-riverside-hotel.html",
+      "destination": "/project-h-hotel-los-angeles.html",
       "permanent": true
     },
     {
