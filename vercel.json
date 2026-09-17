@@ -266,6 +266,11 @@
       "permanent": true
     },
     {
+      "source": "/project-office-seattle",
+      "destination": "/project-office-seattle.html",
+      "permanent": true
+    },
+    {
       "source": "/project-private-estate",
       "destination": "/project-private-estate.html",
       "permanent": true
