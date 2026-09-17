@@ -211,6 +211,11 @@
       "permanent": true
     },
     {
+      "source": "/project-augustas-condominium-tower",
+      "destination": "/project-augustas-condominium-tower.html",
+      "permanent": true
+    },
+    {
       "source": "/project-brightwater-leasing-gallery",
       "destination": "/project-brightwater-leasing-gallery.html",
       "permanent": true
@@ -312,7 +317,7 @@
     },
     {
       "source": "/project-tidewater-plaza-sculpture",
-      "destination": "/project-tidewater-plaza-sculpture.html",
+      "destination": "/project-augustas-condominium-tower.html",
       "permanent": true
     },
     {
