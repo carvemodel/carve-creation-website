@@ -217,12 +217,17 @@
     },
     {
       "source": "/project-cascade-hotel-lighting",
-      "destination": "/project-cascade-hotel-lighting.html",
+      "destination": "/project-new-york-grand-palace-hotel.html",
       "permanent": true
     },
     {
       "source": "/project-cedar-grove-community-library",
       "destination": "/project-cedar-grove-community-library.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-conrad-los-angeles",
+      "destination": "/project-conrad-los-angeles.html",
       "permanent": true
     },
     {
@@ -232,7 +237,7 @@
     },
     {
       "source": "/project-ferncroft-campus-lighting",
-      "destination": "/project-ferncroft-campus-lighting.html",
+      "destination": "/project-conrad-los-angeles.html",
       "permanent": true
     },
     {
@@ -253,6 +258,11 @@
     {
       "source": "/project-meridian-coffee-rollout",
       "destination": "/project-din-tai-fung.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-new-york-grand-palace-hotel",
+      "destination": "/project-new-york-grand-palace-hotel.html",
       "permanent": true
     },
     {
