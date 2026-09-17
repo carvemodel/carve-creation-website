@@ -227,7 +227,12 @@
     },
     {
       "source": "/project-cedar-grove-community-library",
-      "destination": "/project-cedar-grove-community-library.html",
+      "destination": "/market-healthcare-education.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-cedar-grove-community-library.html",
+      "destination": "/market-healthcare-education.html",
       "permanent": true
     },
     {
@@ -247,7 +252,12 @@
     },
     {
       "source": "/project-harbor-view",
-      "destination": "/project-harbor-view.html",
+      "destination": "/market-multifamily-mixed-use.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-harbor-view.html",
+      "destination": "/market-multifamily-mixed-use.html",
       "permanent": true
     },
     {
@@ -287,7 +297,12 @@
     },
     {
       "source": "/project-northgate-campus",
-      "destination": "/project-northgate-campus.html",
+      "destination": "/market-workplace.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-northgate-campus.html",
+      "destination": "/market-workplace.html",
       "permanent": true
     },
     {
