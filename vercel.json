@@ -251,6 +251,11 @@
       "permanent": true
     },
     {
+      "source": "/project-industville-market-hall",
+      "destination": "/project-industville-market-hall.html",
+      "permanent": true
+    },
+    {
       "source": "/project-meadowcrest-courtyard-sculpture",
       "destination": "/project-meadowcrest-courtyard-sculpture.html",
       "permanent": true
@@ -312,7 +317,7 @@
     },
     {
       "source": "/project-union-market-hall-lighting",
-      "destination": "/project-union-market-hall-lighting.html",
+      "destination": "/project-industville-market-hall.html",
       "permanent": true
     },
     {
