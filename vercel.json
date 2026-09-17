@@ -207,7 +207,7 @@
     },
     {
       "source": "/project-anchor-point-lobby-installation",
-      "destination": "/project-anchor-point-lobby-installation.html",
+      "destination": "/project-university-of-michigan.html",
       "permanent": true
     },
     {
@@ -313,6 +313,11 @@
     {
       "source": "/project-tidewater-plaza-sculpture",
       "destination": "/project-tidewater-plaza-sculpture.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-university-of-michigan",
+      "destination": "/project-university-of-michigan.html",
       "permanent": true
     },
     {
