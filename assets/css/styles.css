@@ -1063,13 +1063,18 @@ img { max-width: 100%; display: block; }
 .scope-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--cream-2);
+  border: none;
   border-radius: 999px;
   padding: 8px 16px;
   font-size: var(--fs-sm); font-weight: 600; color: var(--ink);
+  font-family: inherit;
   margin: 0 8px 8px 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
-a.scope-badge { transition: background .15s ease, color .15s ease, border-color .15s ease; }
-a.scope-badge:hover {
+a.scope-badge, button.scope-badge { transition: background .15s ease, color .15s ease, border-color .15s ease; }
+a.scope-badge:hover, button.scope-badge:hover {
   background: var(--dark) !important;
   color: var(--white) !important;
   border-color: var(--dark) !important;
