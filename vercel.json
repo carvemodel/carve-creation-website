@@ -217,7 +217,12 @@
     },
     {
       "source": "/project-brightwater-leasing-gallery",
-      "destination": "/project-brightwater-leasing-gallery.html",
+      "destination": "/project-brightwater-retail-pop-up.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-brightwater-leasing-gallery.html",
+      "destination": "/project-brightwater-retail-pop-up.html",
       "permanent": true
     },
     {
@@ -342,7 +347,17 @@
     },
     {
       "source": "/project-solstice-pop-up-activation",
-      "destination": "/project-solstice-pop-up-activation.html",
+      "destination": "/project-gallery-reception-waiting-area.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-solstice-pop-up-activation.html",
+      "destination": "/project-gallery-reception-waiting-area.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-gallery-reception-waiting-area",
+      "destination": "/project-gallery-reception-waiting-area.html",
       "permanent": true
     },
     {

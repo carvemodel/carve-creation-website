@@ -42,9 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Deep-link into a specific delivery stage (e.g. how-we-work.html#stage-3):
   // open its accordion panel and scroll it into view.
-  function openStageFromHash() {
-    if (!location.hash) return;
-    var target = document.querySelector(location.hash);
+  function openStage(target) {
     if (!target || !target.classList.contains('accordion-item')) return;
     var group = target.closest('.accordion-group');
     if (group) {
@@ -59,12 +57,40 @@ document.addEventListener('DOMContentLoaded', function () {
     target.classList.add('open');
     var plus = target.querySelector('.q .plus');
     if (plus) plus.textContent = '−';
+    // Wait for the open/close max-height transitions (.25s, set in CSS) to
+    // finish before scrolling, otherwise scrollIntoView targets a position
+    // that shifts as the accordion panels keep expanding/collapsing,
+    // landing on the wrong stage.
     setTimeout(function () {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 60);
+    }, 320);
+  }
+  function openStageFromHash() {
+    if (!location.hash) return;
+    openStage(document.querySelector(location.hash));
   }
   openStageFromHash();
   window.addEventListener('hashchange', openStageFromHash);
+
+  // Links that deep-link straight to a stage (e.g. the eight-stage timeline
+  // diagram) need to be intercepted: the page also sets `scroll-behavior:
+  // smooth` on <html>, so the browser's own native hash-jump starts a smooth
+  // scroll toward the target at the same moment our JS above does, and the
+  // two scrolls fight each other and land short, on the wrong stage. Taking
+  // over the click entirely (updating the URL ourselves, without letting the
+  // browser perform its own jump) avoids that race.
+  document.querySelectorAll('a[href^="#stage-"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href');
+      var target = document.querySelector(id);
+      if (!target || !target.classList.contains('accordion-item')) return;
+      e.preventDefault();
+      if (location.hash !== id) {
+        history.pushState(null, '', id);
+      }
+      openStage(target);
+    });
+  });
 
   // Demo form handling: prevent real submission, show confirmation message
   document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
