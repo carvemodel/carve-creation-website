@@ -126,11 +126,6 @@
       "permanent": true
     },
     {
-      "source": "/markets",
-      "destination": "/markets.html",
-      "permanent": true
-    },
-    {
       "source": "/news-aia26-san-diego",
       "destination": "/news-aia26-san-diego.html",
       "permanent": true
