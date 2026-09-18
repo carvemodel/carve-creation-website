@@ -292,7 +292,17 @@
     },
     {
       "source": "/project-northfield-corporate-meeting-suite",
-      "destination": "/project-northfield-corporate-meeting-suite.html",
+      "destination": "/project-zeiss-innovation-center.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-northfield-corporate-meeting-suite.html",
+      "destination": "/project-zeiss-innovation-center.html",
+      "permanent": true
+    },
+    {
+      "source": "/project-zeiss-innovation-center",
+      "destination": "/project-zeiss-innovation-center.html",
       "permanent": true
     },
     {
