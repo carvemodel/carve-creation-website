@@ -1462,4 +1462,5 @@ a.scope-badge:hover, button.scope-badge:hover {
   .nowrap-heading { white-space: normal; }
   .one-line-heading { white-space: normal; font-size: var(--fs-one-line-mobile); }
   .card h3.fit-line { white-space: normal; font-size: var(--fs-h3); }
+  .btn { white-space: normal; text-align: center; min-width: 0; }
 }
