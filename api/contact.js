@@ -35,17 +35,14 @@ module.exports = async function handler(req, res) {
   body = body || {};
 
   const {
-    name, company, email, phone,
-    project_name, project_location, role, market,
-    needs, project_stage, budget, delivery_timing,
+    name, company, email, capability,
+    project_location, project_stage, budget, delivery_timing,
     project_details, file_link, files
   } = body;
 
-  if (!name || !company || !email || !project_location || !project_stage) {
+  if (!name || !company || !email || !capability || !project_details) {
     return res.status(400).json({ error: 'Please complete all required fields.' });
   }
-
-  const needsList = Array.isArray(needs) ? needs.join(', ') : (needs || 'Not specified');
 
   // `files` is an array of { name, url, size } uploaded client-side directly to
   // Vercel Blob (see api/blob-upload.js) before this endpoint was called, so
@@ -63,16 +60,12 @@ module.exports = async function handler(req, res) {
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Name</td><td>${escapeHtml(name)}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Company</td><td>${escapeHtml(company)}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Email</td><td>${escapeHtml(email)}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Phone</td><td>${escapeHtml(phone || 'Not provided')}</td></tr>
-      <tr><td style="padding:12px 12px 4px 0;color:#666;">Project Name</td><td style="padding-top:12px;">${escapeHtml(project_name || 'Not provided')}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Project Location</td><td>${escapeHtml(project_location)}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Role</td><td>${escapeHtml(role || 'Not provided')}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Market</td><td>${escapeHtml(market || 'Not provided')}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">What They Need</td><td>${escapeHtml(needsList)}</td></tr>
-      <tr><td style="padding:4px 12px 4px 0;color:#666;">Project Stage</td><td>${escapeHtml(project_stage)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#666;">Capability</td><td>${escapeHtml(capability)}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#666;">Project Location</td><td>${escapeHtml(project_location || 'Not provided')}</td></tr>
+      <tr><td style="padding:4px 12px 4px 0;color:#666;">Project Stage</td><td>${escapeHtml(project_stage || 'Not provided')}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Budget</td><td>${escapeHtml(budget || 'Not provided')}</td></tr>
       <tr><td style="padding:4px 12px 4px 0;color:#666;">Target Delivery Timing</td><td>${escapeHtml(delivery_timing || 'Not provided')}</td></tr>
-      <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Project Description</td><td style="padding-top:12px;white-space:pre-wrap;">${escapeHtml(project_details || 'Not provided')}</td></tr>
+      <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Project Description</td><td style="padding-top:12px;white-space:pre-wrap;">${escapeHtml(project_details)}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;">File-Sharing Link</td><td style="padding-top:12px;">${escapeHtml(file_link || 'None provided')}</td></tr>
       <tr><td style="padding:12px 12px 4px 0;color:#666;vertical-align:top;">Uploaded Files</td><td style="padding-top:12px;">${filesHtml}</td></tr>
     </table>

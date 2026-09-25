@@ -88,37 +88,20 @@
             <div class="field"><label for="cf-name">Name* </label><input type="text" id="cf-name" name="name" placeholder="" required></div>
             <div class="field"><label for="cf-company">Company / Organization* </label><input type="text" id="cf-company" name="company" placeholder="" required></div>
             <div class="field"><label for="cf-email">Email* </label><input type="email" id="cf-email" name="email" placeholder="" required></div>
-            <div class="field"><label for="cf-phone">Phone Number <span class="hint">Optional</span></label><input type="tel" id="cf-phone" name="phone" placeholder=""></div>
           </div>
 
           <h3 class="form-section-title">Project Information</h3>
           <div class="form-grid">
-            <div class="field"><label for="cf-project-name">Project Name <span class="hint">Optional</span></label><input type="text" id="cf-project-name" name="project_name" placeholder=""></div>
-            <div class="field"><label for="cf-project-location">Project Location* <span class="hint">City, state/province, and country</span></label><input type="text" id="cf-project-location" name="project_location" placeholder="" required></div>
-            <div class="field"><label for="cf-role">Your Role <span class="hint">Optional</span></label><select id="cf-role" name="role"><option value="">Select&hellip;</option><option>Owner or Developer</option><option>Architect or Interior Designer</option><option>General Contractor</option><option>Purchasing or Procurement</option><option>Project Manager</option><option>Brand or Operator</option><option>Other</option></select></div>
-            <div class="field"><label for="cf-market">Market <span class="hint">Optional</span></label><select id="cf-market" name="market"><option value="">Select&hellip;</option><option>Hospitality</option><option>Workplace</option><option>Multifamily &amp; Mixed-Use</option><option>Retail, Food &amp; Beverage</option><option>Events &amp; Brand Activations</option><option>Healthcare, Education &amp; Civic</option><option>Other Commercial</option></select></div>
-
-            <div class="field full">
-              <label>What Do You Need? <span class="hint">Select all that apply.</span></label>
-              <div class="grid grid-2" style="gap:10px;margin-top:2px;">
-                <div class="checkbox-row"><input type="checkbox" id="need-furniture" name="needs" value="Contract Furniture Package"><label for="need-furniture">Contract Furniture Package</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-branding" name="needs" value="Branding &amp; Wayfinding Package"><label for="need-branding">Branding &amp; Wayfinding Package</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-lighting" name="needs" value="Architectural Lighting Package"><label for="need-lighting">Architectural Lighting Package</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-flex" name="needs" value="Carve Flex Deployable Space"><label for="need-flex">Carve Flex&trade; Deployable Space</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-sculpture" name="needs" value="Public Art &amp; Sculpture Fabrication"><label for="need-sculpture">Public Art &amp; Sculpture Fabrication</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-coordinated" name="needs" value="Coordinated Multi-Capability Package"><label for="need-coordinated">Coordinated Multi-Capability Package</label></div>
-                <div class="checkbox-row"><input type="checkbox" id="need-notsure" name="needs" value="Other / Not Sure Yet"><label for="need-notsure">Other / Not Sure Yet</label></div>
-              </div>
-            </div>
-
-            <div class="field"><label for="cf-project-stage">Project Stage* </label><select id="cf-project-stage" name="project_stage" required><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
+            <div class="field"><label for="cf-capability">Capability* </label><select id="cf-capability" name="capability" required><option value="">Select&hellip;</option><option>Contract Furniture</option><option>Branding &amp; Wayfinding</option><option>Architectural Lighting</option><option>Carve Flex&trade; Deployable Spaces</option><option>Public Art &amp; Sculpture</option><option>Coordinated Multi-Capability Package</option><option>Other / Not Sure Yet</option></select></div>
+            <div class="field"><label for="cf-project-location">Project Location <span class="hint">Optional &mdash; city, state/province, and country</span></label><input type="text" id="cf-project-location" name="project_location" placeholder=""></div>
+            <div class="field"><label for="cf-project-stage">Project Stage <span class="hint">Optional</span></label><select id="cf-project-stage" name="project_stage"><option value="">Select&hellip;</option><option>Early Planning</option><option>Design Development</option><option>Construction Documents</option><option>Procurement or Bidding</option><option>Ready for Production</option></select></div>
             <div class="field"><label for="cf-budget">Estimated Budget for This Package <span class="hint">Optional</span></label><select id="cf-budget" name="budget"><option value="">Select&hellip;</option><option>Under $25,000</option><option>$25,000&ndash;$100,000</option><option>$100,000&ndash;$500,000</option><option>Over $500,000</option><option>Not Yet Established</option></select></div>
-            <div class="field"><label for="cf-delivery-timing">Target Delivery Timing </label><select id="cf-delivery-timing" name="delivery_timing"><option value="">Select&hellip;</option><option>Within 3 Months</option><option>3&ndash;6 Months</option><option>6&ndash;12 Months</option><option>More Than 12 Months</option><option>Not Yet Determined</option></select></div>
-            <div class="field full"><label for="cf-project-details">Project Description <span class="hint">Optional</span></label><textarea id="cf-project-details" name="project_details" placeholder="Briefly describe what you are looking to manufacture or deploy. Include approximate quantities, project stage, desired materials or finishes, and any important schedule or site requirements currently known. It is okay if some information has not yet been determined."></textarea></div>
+            <div class="field"><label for="cf-delivery-timing">Target Delivery Timing <span class="hint">Optional</span></label><select id="cf-delivery-timing" name="delivery_timing"><option value="">Select&hellip;</option><option>Within 3 Months</option><option>3&ndash;6 Months</option><option>6&ndash;12 Months</option><option>More Than 12 Months</option><option>Not Yet Determined</option></select></div>
+            <div class="field full"><label for="cf-project-details">Short Project Description* </label><textarea id="cf-project-details" name="project_details" placeholder="Briefly describe what you are looking to manufacture or deploy. It is okay if some information has not yet been determined." required></textarea></div>
           </div>
 
-          <h3 class="form-section-title">Project Files</h3>
-          <p class="muted-note">Upload anything currently available&mdash;drawings, schedules, specifications, renderings, quantity lists, finish information, or reference images. Complete documents are not required.<br>Accepted formats: PDF, DWG, XLSX, DOCX, JPG, PNG and ZIP.</p>
+          <h3 class="form-section-title">Project File or Link <span class="hint">Optional</span></h3>
+          <p class="muted-note">Upload anything currently available&mdash;drawings, schedules, specifications, renderings, quantity lists, finish information, or reference images&mdash;or share a link instead. Complete documents are not required.<br>Accepted formats: PDF, DWG, XLSX, DOCX, JPG, PNG and ZIP.</p>
           <div class="file-drop" id="file-drop-zone" style="margin-bottom:20px;">
             <strong>Drag files here or click to upload</strong>
             <input type="file" id="project-files" name="files" multiple accept=".pdf,.dwg,.xlsx,.docx,.jpg,.jpeg,.png,.zip" style="margin-top:10px;">
