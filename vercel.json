@@ -422,6 +422,11 @@
       "permanent": true
     },
     {
+      "source": "/scale-model-services/architectural",
+      "destination": "https://www.physical-model.com/architectural-scale-models",
+      "permanent": true
+    },
+    {
       "source": "/scale-model-services/product",
       "destination": "https://www.physical-model.com/scale-model-services/product",
       "permanent": true
