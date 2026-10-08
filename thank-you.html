@@ -18,7 +18,7 @@
   } catch (e) { ccNewLead = true; }
 
   gtag('config', 'G-3JFYHSCM83', { send_page_view: ccNewLead });
-  gtag('config', 'AW-18456611610');
+  if (ccNewLead) { gtag('config', 'AW-18456611610'); }
 </script>
 
 <meta charset="UTF-8">
