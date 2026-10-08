@@ -1465,47 +1465,62 @@ a.scope-badge:hover, button.scope-badge:hover {
   .btn { white-space: normal; text-align: center; min-width: 0; }
 }
 
-/* ---------- Public Art & Sculpture: phone hero layout ----------
-   Header gets its own dark band above the hero, the photo sits in its own
-   area with the sculpture in view, and the short intro and button sit
-   directly below it so they appear on the first screen. */
+/* ---------- Phone layout (all pages) ----------
+   The header gets its own dark band above the hero instead of floating over
+   the photo/heading, the hero photo sits in its own area, and the hero text
+   (and button) sit directly below it. Text sizes are raised for legibility. */
 @media (max-width: 720px) {
-  .page-sculpture .site-header {
+  .site-header {
     position: relative;
     height: auto;
     min-height: 68px;
     background: var(--dark);
   }
-  .page-sculpture .site-header .container { padding-left: 20px; padding-right: 0; }
-  .page-sculpture .header-logo { margin: 0; }
-  .page-sculpture .header-logo img { height: 40px; }
-  .page-sculpture .header-actions { right: 20px; gap: 14px; }
+  .site-header .container { padding-left: 20px; padding-right: 0; }
+  .header-logo { margin: 0; }
+  .header-logo img { height: 40px; }
+  .header-actions { right: 20px; gap: 14px; }
 
-  .page-sculpture .hero.has-photo {
+  /* Photo heroes (inner pages) */
+  .hero.has-photo {
     --hero-photo-h: clamp(190px, 32svh, 340px);
     height: auto;
     display: block;
     background-color: var(--dark);
     background-size: auto var(--hero-photo-h);
-    background-position: 78% 0;
+    background-position: center top;
     background-repeat: no-repeat;
     padding: calc(var(--hero-photo-h) + 4px) 0 36px;
   }
-  .page-sculpture .hero.has-photo::after {
+  .hero.has-photo::after {
     inset: 0 0 auto 0;
     height: var(--hero-photo-h);
     background: linear-gradient(180deg, rgba(15,15,13,.1) 0%, rgba(15,15,13,0) 45%, var(--dark) 100%);
   }
-  .page-sculpture .hero.has-photo .container { padding-left: 20px; padding-right: 20px; }
-  .page-sculpture .hero.has-photo h1 { font-size: 1.85rem; line-height: 1.12; margin-bottom: .6rem; }
-  .page-sculpture .hero.has-photo p.lede { font-size: 1rem; line-height: 1.5; margin-bottom: 0; }
-  .page-sculpture .hero.has-photo .btn-row { margin-top: 1.1rem; }
-  .page-sculpture .hero.has-photo .btn-row .btn { width: 100%; }
-  .page-sculpture .hero.has-photo .eyebrow { margin-bottom: .6rem; }
+  .hero.has-photo .container { padding-left: 20px; padding-right: 20px; }
+  .hero.has-photo h1 { font-size: 1.85rem; line-height: 1.12; margin-bottom: .6rem; }
+  .hero.has-photo p.lede { font-size: 1rem; line-height: 1.5; margin-bottom: 0; }
+  .hero.has-photo p.lede + p.lede { margin-top: .8rem; }
+  .hero.has-photo .btn-row { margin-top: 1.1rem; }
+  .hero.has-photo .btn-row .btn { width: 100%; }
+  .hero.has-photo .eyebrow { margin-bottom: .6rem; }
+
+  /* Plain (no-photo) heroes: the header no longer overlays them */
+  .hero:not(.has-photo):not(.hero-slider) { padding: 40px 0 48px; }
+
+  /* Legibility floors */
+  .scope-badge { font-size: .78rem !important; line-height: 1.3; padding: 5px 10px !important; }
+  .cs-tag { font-size: .78rem !important; }
+  .card .link.fit-line .link-label { font-size: .85rem; }
+  .eyebrow { font-size: .78rem; }
+
+  /* Homepage slider: leave room for the header band above it */
+  .hero-slider { height: calc(100svh - 68px - (var(--frame) * 2)); min-height: 520px; }
+  .hero-slide .container { padding-left: 20px; padding-right: 20px; }
 }
 @media (max-width: 720px) and (max-height: 700px) {
-  .page-sculpture .hero.has-photo { padding-bottom: 24px; }
-  .page-sculpture .hero.has-photo h1 { font-size: 1.55rem; }
-  .page-sculpture .hero.has-photo p.lede { font-size: .94rem; line-height: 1.45; }
-  .page-sculpture .hero.has-photo .btn-row { margin-top: .9rem; }
+  .hero.has-photo { padding-bottom: 24px; }
+  .hero.has-photo h1 { font-size: 1.55rem; }
+  .hero.has-photo p.lede { font-size: .94rem; line-height: 1.45; }
+  .hero.has-photo .btn-row { margin-top: .9rem; }
 }
