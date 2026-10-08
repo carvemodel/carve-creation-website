@@ -26,7 +26,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=300">
+<link rel="stylesheet" href="assets/css/styles.css?v=301">
 <link rel="icon" type="image/png" href="assets/images/Favicon.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ContactPage", "name": "Contact Carve Creation", "description": "Contact Carve Creation about a contract furniture, branding and wayfinding, architectural lighting, Carve Flex\u2122, or custom built-environment manufacturing project.", "url": "https://www.carvecreation.com/contact.html", "about": {"@id": "https://www.carvecreation.com/#organization"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.carvecreation.com/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.carvecreation.com/contact.html"}]}</script>
@@ -73,7 +73,7 @@
     <div class="split uneven" style="align-items:start;margin-top:1.6rem;">
 
       <div>
-        <div style="background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:32px;position:sticky;top:24px;">
+        <div class="contact-aside" style="background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:32px;position:sticky;top:24px;">
           <span class="eyebrow">Direct Contact</span>
           <h3 style="margin:.6rem 0 1.2rem;">Prefer to Speak with Us?</h3>
           <p style="margin-bottom:.5em;"><strong>Email:</strong> <a href="mailto:sales@carvecreation.com" style="color:var(--accent);font-weight:600;">sales@carvecreation.com</a></p>
@@ -103,7 +103,7 @@
           <h3 class="form-section-title">Project File or Link <span class="hint">Optional</span></h3>
           <p class="muted-note">Upload anything currently available&mdash;drawings, schedules, specifications, renderings, quantity lists, finish information, or reference images&mdash;or share a link instead. Complete documents are not required.<br>Accepted formats: PDF, DWG, XLSX, DOCX, JPG, PNG and ZIP.</p>
           <div class="file-drop" id="file-drop-zone" style="margin-bottom:20px;">
-            <strong>Drag files here or click to upload</strong>
+            <strong id="file-drop-label">Drag files here or click to upload</strong>
             <input type="file" id="project-files" name="files" multiple accept=".pdf,.dwg,.xlsx,.docx,.jpg,.jpeg,.png,.zip" style="margin-top:10px;">
             <ul class="file-drop-list" id="file-drop-list"></ul>
           </div>
@@ -187,6 +187,10 @@ import { upload } from 'https://esm.sh/@vercel/blob@2.8.0/client';
   var dropZone = document.getElementById('file-drop-zone');
   var fileInput = document.getElementById('project-files');
   var fileListEl = document.getElementById('file-drop-list');
+  if (window.matchMedia && window.matchMedia('(hover: none)').matches) {
+    var dropLabel = document.getElementById('file-drop-label');
+    if (dropLabel) dropLabel.textContent = 'Tap to choose files to upload';
+  }
 
   // Selected files live in this array (not just fileInput.files), since files
   // can arrive either from the native picker or from a drag-and-drop onto the
