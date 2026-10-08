@@ -335,6 +335,7 @@ import { upload } from 'https://esm.sh/@vercel/blob@2.8.0/client';
       })
       .then(function (result) {
         if (result.ok) {
+          try { sessionStorage.setItem('cc_lead_submitted', '1'); } catch (e) {}
           window.location.href = 'thank-you.html';
         } else {
           throw new Error((result.data && result.data.error) || 'Something went wrong. Please try again.');

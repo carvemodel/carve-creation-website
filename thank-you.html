@@ -8,7 +8,16 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-3JFYHSCM83');
+  // Only count the thank-you page view (and the lead event tied to it) right
+  // after a real form submission. Refreshes or direct visits skip the GA4
+  // page_view so generate_lead is not fired again.
+  var ccNewLead = false;
+  try {
+    ccNewLead = sessionStorage.getItem('cc_lead_submitted') === '1';
+    sessionStorage.removeItem('cc_lead_submitted');
+  } catch (e) { ccNewLead = true; }
+
+  gtag('config', 'G-3JFYHSCM83', { send_page_view: ccNewLead });
   gtag('config', 'AW-18456611610');
 </script>
 
